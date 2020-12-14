@@ -46,7 +46,12 @@ public class MovementStats
     // Chaves usadas para interagir
     public KeyCode leftKey = KeyCode.LeftArrow, 
         rightKey = KeyCode.RightArrow, 
-        jumpKey = KeyCode.Z;
+       Upkey = KeyCode.UpArrow,
+        DownKey = KeyCode.DownArrow,
+        UlKey = KeyCode.Q,
+        UrKey = KeyCode.E,
+        jumpKey = KeyCode.S;
+       
     #endregion
 
     [Space]
@@ -140,10 +145,10 @@ public class MovementStats
 
     #region Jump Vars
     //Altura do salto por salto
-    public float jumpHeight = 16;
+    public float jumpHeight = 14;
 
     //Vezes que o jogador pode pular antes / sem bater no chão.
-    public int jumpAmount = 1;
+    public int jumpAmount = -40;
 
     //Usado para o número de saltos com base em jumpAmount.
     //[HideInInspector] public int currentJumps;
@@ -225,10 +230,10 @@ public class MovementStats
     [Header("Determina se o jogador pode pular na parede.")]
     public bool canWallJump = true;
 
-    //Checks if the player is walljumping.
+    //Verifica se o jogador está pulando na parede.
     [HideInInspector] public bool isWallJumping;
 
-    //Checks if player is touching the ground.
+    //Verifica se o jogador está tocando o solo.
     [HideInInspector] public bool isGrounded;
 
     /// <summary>
@@ -259,12 +264,12 @@ public class MovementStats
 
 [RequireComponent(typeof(Rigidbody2D), typeof(GeneralPlayerScript))]
 public class PlayerMovement : MonoBehaviour {
-    
+
     [HideInInspector] public GeneralPlayerScript gps;
     [Header("Estatísticas de velocidade de movimento.")]
     public MovementStats ms;
-    //para definir o lado do idle  toda vez que for para a esquerda ele ira mudar para true assim trocando o lado do sprite no idle 
-    public bool estado = false; 
+   
+    public bool estado = false; //para definir o lado do idle  toda vez que for para a esquerda ele ira mudar para true assim trocando o lado do sprite no idle 
     public enum State
     {
         //O estado muda quando: O player está inativo.
@@ -330,10 +335,31 @@ public class PlayerMovement : MonoBehaviour {
         //Método de chamadas que gerencia o movimento do jogador através da flutuação de direção.
         MovePlayer(direction);
 
-        if (Input.GetKeyDown(ms.jumpKey) && playerJump != null)
+        if (Input.GetKeyDown(ms.jumpKey))
+        {
+
+
+            playerJump();
+
+        }
+        if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.jumpKey))// realiza o pulo com cambolhota quando o jogador vai para a esquerda e pula
         {
             playerJump();
+            gps.ac.PlayAnimation(4);
+
+
         }
+        if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.jumpKey)) //realiza o pulo com cambolhota quando o jogador vai para a direita e pula
+        {
+            playerJump();
+            gps.ac.PlayAnimation(7);
+
+        }
+
+        if (Input.GetKey(ms.DownKey)){down(); }
+        if (Input.GetKey(ms.Upkey)) { up(); }
+        
+
     }
 
     private void FixedUpdate()
@@ -355,9 +381,9 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (state == State.wall)
         {
-            
 
-           // Adiciona WallJump e remove GroundJump do playerJump.
+
+            // Adiciona WallJump e remove GroundJump do playerJump.
             if (!ContainsMethod("Wall")) playerJump += WallJump;
             if (ContainsMethod("Ground")) playerJump -= GroundJump;
         }
@@ -416,7 +442,7 @@ public class PlayerMovement : MonoBehaviour {
         SetVelocity(setter, false);
 
         //Adiciona ao contador de pulos.
-       // ms.Jump();
+        // ms.Jump();
         float direction = DirectionGetter();
         if (direction == 1)
         {
@@ -437,7 +463,7 @@ public class PlayerMovement : MonoBehaviour {
                 //Reproduz animação de salto na parede para o outro lado
                 gps.ac.PlayAnimation(7);
             }
-        } 
+        }
 
         //Define isWallJumping de volta para false para tornar o jogador capaz de se mover novamente.
         Invoke("ResetWallJump", 0.1f);
@@ -454,37 +480,38 @@ public class PlayerMovement : MonoBehaviour {
     /// </summary>
     private void GroundJump()
     {
-        //if (!ms.ActCanJump)
-           // return;
-        float direction = DirectionGetter();
-        if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.jumpKey))
+        if (ms.isGrounded != false)// realiza o salto somente se ele estiver encostando no chão 
         {
-            gps.ac.PlayAnimation(13);
-        }
-        if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.jumpKey))
-        {
-            gps.ac.PlayAnimation(12);
-        }
-            //Reproduz animação de salto ao solo.
-            if ( direction== 1)
-        {
-            gps.ac.PlayAnimation(2);
-        }
-        if (direction == -1)
-        {
-            gps.ac.PlayAnimation(9);
-        }
 
-        //Define a velocidade de salto do jogador.
-        Vector2 jumpVel = new Vector2(ms.CurrentVelocity.x, ms.ActJumpHeight);
 
-        //Passa o JumpVel para SetVelocity para modificar a velocidade do jogador.
-        SetVelocity(jumpVel, false);
 
-        //Adiciona ao contador de pulos.
-        //ms.Jump();
+            if (estado == false)
+            {
+                gps.ac.PlayAnimation(14);
+
+
+            }
+            else if (estado != false)
+            {
+                gps.ac.PlayAnimation(2);
+
+            }
+
+
+
+
+
+            //Define a velocidade de salto do jogador.
+            Vector2 jumpVel = new Vector2(ms.CurrentVelocity.x, ms.ActJumpHeight);
+
+            //Passa o JumpVel para SetVelocity para modificar a velocidade do jogador.
+            SetVelocity(jumpVel, false);
+
+            //Adiciona ao contador de pulos.
+            //ms.Jump();
+
+        }
     }
-
     /// <summary>
     /// Método de manipulação do movimento horizontal do jogador.
     /// </summary>
@@ -500,7 +527,7 @@ public class PlayerMovement : MonoBehaviour {
             SetPlayerIdle();
             return;
         }
-        if(direction == 1)
+        if (direction == 1)
         {
             estado = false;
             State moveState = State.move;
@@ -509,7 +536,7 @@ public class PlayerMovement : MonoBehaviour {
             //Joga animação de movimento
             if (state == moveState) gps.ac.PlayAnimation(1);
         }
-        if(direction == -1)
+        if (direction == -1)
         {
             estado = true;
             State moveState = State.move;
@@ -517,7 +544,7 @@ public class PlayerMovement : MonoBehaviour {
 
             if (state == moveState) gps.ac.PlayAnimation(5); }
 
-        
+
 
         direction = Mathf.Clamp(direction, -1, 1);
 
@@ -542,7 +569,7 @@ public class PlayerMovement : MonoBehaviour {
         //Define a velocidade x do jogador em 0 para evitar qualquer patinação no gelo.
         SetVelocity(new Vector2(0, gps.rb.velocity.y), false);
         float tmp1 = 0;
-        
+
 
         if (state == State.idle)
         {
@@ -557,12 +584,54 @@ public class PlayerMovement : MonoBehaviour {
                 gps.ac.PlayAnimation(10);
             }
         }
-    
 
 
 
-        
+
+
     }
+
+
+    private void down() //realiza a animação de agaixar somente quando o playes estiver encostando no chão
+    {
+        if (ms.isGrounded != false)
+        {
+
+            if (estado == false)
+            {
+                gps.ac.PlayAnimation(17);
+                //if (tmp1 == -1) if (state == moveState) gps.ac.PlayAnimation(10);
+            }
+            if (estado != false)
+            {
+                //Debug.Log("agaixou");
+                gps.ac.PlayAnimation(18);
+            }
+
+        }
+    }
+
+
+
+    private void up() //realiza a animação de mirar para cima somente quando o playes estiver encostando no chão
+    {
+        if (ms.isGrounded != false)
+        {
+
+            if (estado == false)
+            {
+                gps.ac.PlayAnimation(9);
+                //if (tmp1 == -1) if (state == moveState) gps.ac.PlayAnimation(10);
+            }
+            if (estado != false)
+            {
+                //Debug.Log("agaixou");
+                gps.ac.PlayAnimation(19);
+            }
+
+        }
+    }
+
 
     /// <summary>
     /// Checks if <see cref="ChangeState(State)"/> pode mudar de estado. (ONLY USED BY <see cref="ChangeState(State)"/>)
@@ -574,7 +643,7 @@ public class PlayerMovement : MonoBehaviour {
         bool tmp = false;
         if ((state != stateToGive))
         {
-            switch(stateToGive)
+            switch (stateToGive)
             {
                 //Usado para evitar o estado inativo constante.
                 case State.idle:
@@ -588,8 +657,8 @@ public class PlayerMovement : MonoBehaviour {
                     break;
                 case State.wall:
                 //Nota: Você pode cancelar o comentário se não quiser que o jogador salte na parede quando estiver no chão.
-                //if (!ms.isGrounded) tmp = true;
-                //break;
+                if (!ms.isGrounded) tmp = true;
+                break;
                 default: tmp = true; break;
             }
         }
@@ -605,7 +674,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (!CanChangeState(stateToGive))
             return;
-        
+
         state = stateToGive;
     }
 
@@ -673,6 +742,7 @@ public class PlayerMovement : MonoBehaviour {
     /// </summary>
     void GroundEnter()
     {
+        //animação de cair no solo
         //Define o bool verificando se o jogador está tocando o solo.
         ms.isGrounded = true;
 
@@ -680,7 +750,7 @@ public class PlayerMovement : MonoBehaviour {
         ChangeState(State.idle);
 
         //Redefine o contador de saltos para 0 para permitir que o jogador salte.
-       // ms.ResetJump();
+        // ms.ResetJump();
 
         //Remove o aumento de velocidade horizontal temporário ao pular de uma parede.
         ms.ChangeMoveSpeedAdditions(ms.wallSpeedAdd, false);
@@ -700,11 +770,22 @@ public class PlayerMovement : MonoBehaviour {
 
 
 
-//Reproduz a animação do salto, mas serve para evitar que o jogador reproduza a animação em execução
-         //no ar ao cair de um penhasco.
-         //O método de salto também reproduz esta animação. 
-       gps.ac.PlayAnimation(2);
-    }
+        //Reproduz a animação do salto, mas serve para evitar que o jogador reproduza a animação em execução
+        //no ar ao cair de um penhasco.
+        //O método de salto também reproduz esta animação. 
+
+        if (estado == false)
+        {
+
+            gps.ac.PlayAnimation(2);
+        }
+        if(estado!= false)
+        {
+            gps.ac.PlayAnimation(14);
+        }
+       
+
+    } 
 
     /// <summary>
     /// Chamado quando o colisor principal colide com o mapa.
@@ -754,5 +835,6 @@ public class PlayerMovement : MonoBehaviour {
         //Adiciona o aumento de velocidade horizontal temporário ao pular de uma parede.
         ms.ChangeMoveSpeedAdditions(ms.wallSpeedAdd);
     }
+ 
     #endregion
 }
