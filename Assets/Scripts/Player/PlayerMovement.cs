@@ -50,7 +50,8 @@ public class MovementStats
         DownKey = KeyCode.DownArrow,
         UlKey = KeyCode.Q,
         UrKey = KeyCode.E,
-        jumpKey = KeyCode.S;
+        jumpKey = KeyCode.S,
+        ActionKey = KeyCode.W;
        
     #endregion
 
@@ -268,7 +269,7 @@ public class PlayerMovement : MonoBehaviour {
     [HideInInspector] public GeneralPlayerScript gps;
     [Header("Estatísticas de velocidade de movimento.")]
     public MovementStats ms;
-   
+    public bool forme = false;
     public bool estado = false; //para definir o lado do idle  toda vez que for para a esquerda ele ira mudar para true assim trocando o lado do sprite no idle 
     public enum State
     {
@@ -345,20 +346,52 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.jumpKey))// realiza o pulo com cambolhota quando o jogador vai para a esquerda e pula
         {
             playerJump();
-            gps.ac.PlayAnimation(4);
+            gps.ac.PlayAnimation(WjAfterL);
 
 
         }
         if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.jumpKey)) //realiza o pulo com cambolhota quando o jogador vai para a direita e pula
         {
             playerJump();
-            gps.ac.PlayAnimation(7);
+            gps.ac.PlayAnimation(WjAfterR);
 
         }
 
-        if (Input.GetKey(ms.DownKey)){down(); }
+        if (Input.GetKey(ms.DownKey)) { down(); }
         if (Input.GetKey(ms.Upkey)) { up(); }
-        
+
+
+        if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ActionKey)) //transforma em morphball
+        {
+
+            Transfomrme(true);
+            
+            if (forme = !false) { Transfomrme(false); }
+            gps.ac.PlayAnimation(35);// animação morph ball}
+        }
+
+        if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.DownKey) && Input.GetKeyDown(ms.ActionKey)) //volta ao normal
+        {
+
+            Transfomrme(true);
+            gps.ac.PlayAnimation(23);// animação morph ball
+
+        }
+        if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.DownKey) && Input.GetKeyDown(ms.ActionKey)) //transforma em morphball
+        {
+
+            Transfomrme(true);
+            gps.ac.PlayAnimation(23);// animação morph ball
+
+        }
+        if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ActionKey)) //transforma em morphball
+        {
+
+            Transfomrme(true);
+
+            if (forme = !false) { Transfomrme(false); }
+            gps.ac.PlayAnimation(35);// animação morph ball}
+        }
 
     }
 
@@ -447,22 +480,22 @@ public class PlayerMovement : MonoBehaviour {
         if (direction == 1)
         {
             bool wexit = true;
-            gps.ac.PlayAnimation(6);
+            //          gps.ac.PlayAnimation(6);
             if (wexit != false) {
                 //Reproduz animação de salto na parede
 
-                gps.ac.PlayAnimation(4); }
+                gps.ac.PlayAnimation(6); }//4
         }
         if (direction == -1)
         {
             bool wexit = true;
-            gps.ac.PlayAnimation(11);
+            //      gps.ac.PlayAnimation(11);
 
             if (wexit != false)
-            {
+                //{
                 //Reproduz animação de salto na parede para o outro lado
-                gps.ac.PlayAnimation(7);
-            }
+                gps.ac.PlayAnimation(11);//7
+            //}
         }
 
         //Define isWallJumping de volta para false para tornar o jogador capaz de se mover novamente.
@@ -474,6 +507,103 @@ public class PlayerMovement : MonoBehaviour {
     {
         ms.isWallJumping = false;
     }
+
+
+
+  
+
+
+
+
+public int standR = 0;
+public int standL = 10;
+public int moveR = 1;
+public int moveL = 5;
+public int JumpR = 2;
+public int JumpL = 14;
+public int WjumpR = 3;
+public int WjumpL = 8;
+public int WjExitR = 4;
+public int WjExitL = 7;
+public int WjAfterR = 11;
+public int WjAfterL = 6;
+public int shotR = 30;
+public int shotL = 31;
+public int UshotR = 19;
+public int UshotL = 9;
+public int Urshot = 26;
+public int ULshot = 27;
+
+
+
+
+private void morphBall()
+{
+
+        
+
+
+
+}
+    private void Transfomrme(bool forme)
+    {
+        if (forme == true)
+        {
+             standR = 25;
+             standL = 25;
+             moveR = 34;
+             moveL = 24;
+            ms.isGrounded = false;
+             JumpR = 24;
+             JumpL = 24;
+             WjumpR = 25;
+             WjumpL = 25;
+             WjExitR = 24;
+             WjExitL = 24;
+             WjAfterR = 24;
+             WjAfterL = 24;
+             shotR = 24;
+             shotL = 24;
+             UshotR = 24;
+             UshotL = 24;
+             Urshot = 24;
+             ULshot = 24;
+
+            this.transform.FindChild("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(false); // desactivate the box collider 2D
+            this.transform.FindChild("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(false); // desactivate the box collider 2D
+
+                   }
+
+        if (forme != true)
+        {
+            standR = 0;
+            standL = 10;
+            moveR = 1;
+            moveL = 5;
+            JumpR = 2;
+            JumpL = 14;
+            WjumpR = 3;
+            WjumpL = 8;
+            WjExitR = 4;
+            WjExitL = 7;
+            WjAfterR = 11;
+            WjAfterL = 6;
+            shotR = 30;
+            shotL = 31;
+            UshotR = 19;
+            UshotL = 9;
+            Urshot = 26;
+            ULshot = 27;
+
+             this.transform.FindChild("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(true); // desactivate the box collider 2D
+            this.transform.FindChild("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(true); // desactivate the box collider 2D
+        }
+    }
+
+
+
+
+
 
     /// <summary>
     /// Método que faz o jogador pular do chão.
@@ -487,13 +617,13 @@ public class PlayerMovement : MonoBehaviour {
 
             if (estado == false)
             {
-                gps.ac.PlayAnimation(14);
+                gps.ac.PlayAnimation(JumpL);
 
 
             }
             else if (estado != false)
             {
-                gps.ac.PlayAnimation(2);
+                gps.ac.PlayAnimation(JumpR);
 
             }
 
@@ -534,7 +664,7 @@ public class PlayerMovement : MonoBehaviour {
             ChangeState(moveState);
 
             //Joga animação de movimento
-            if (state == moveState) gps.ac.PlayAnimation(1);
+            if (state == moveState) gps.ac.PlayAnimation(moveR);
         }
         if (direction == -1)
         {
@@ -542,7 +672,7 @@ public class PlayerMovement : MonoBehaviour {
             State moveState = State.move;
             ChangeState(moveState);
 
-            if (state == moveState) gps.ac.PlayAnimation(5); }
+            if (state == moveState) gps.ac.PlayAnimation(moveL); }
 
 
 
@@ -576,12 +706,12 @@ public class PlayerMovement : MonoBehaviour {
 
             if (estado == false)
             {
-                gps.ac.PlayAnimation(0);
+                gps.ac.PlayAnimation(standR);
                 //if (tmp1 == -1) if (state == moveState) gps.ac.PlayAnimation(10);
             }
             else if (estado != false)
             {
-                gps.ac.PlayAnimation(10);
+                gps.ac.PlayAnimation(standL);
             }
         }
 
@@ -656,9 +786,9 @@ public class PlayerMovement : MonoBehaviour {
                         tmp = true;
                     break;
                 case State.wall:
-                //Nota: Você pode cancelar o comentário se não quiser que o jogador salte na parede quando estiver no chão.
-                if (!ms.isGrounded) tmp = true;
-                break;
+                    //Nota: Você pode cancelar o comentário se não quiser que o jogador salte na parede quando estiver no chão.
+                    if (!ms.isGrounded) tmp = true;
+                    break;
                 default: tmp = true; break;
             }
         }
@@ -742,6 +872,23 @@ public class PlayerMovement : MonoBehaviour {
     /// </summary>
     void GroundEnter()
     {
+        //Define o bool verificando se o jogador está tocando o solo.
+        ms.isGrounded = true;
+
+        if (ms.isGrounded = true)
+        {
+            if (estado == false)
+            {
+
+                gps.ac.PlayAnimation(13);
+            }
+            if (estado != false)
+            {
+                gps.ac.PlayAnimation(12);
+            }
+        }
+    
+       
         //animação de cair no solo
         //Define o bool verificando se o jogador está tocando o solo.
         ms.isGrounded = true;
@@ -777,11 +924,11 @@ public class PlayerMovement : MonoBehaviour {
         if (estado == false)
         {
 
-            gps.ac.PlayAnimation(2);
+            gps.ac.PlayAnimation(JumpR);
         }
         if(estado!= false)
         {
-            gps.ac.PlayAnimation(14);
+            gps.ac.PlayAnimation(JumpL);
         }
        
 

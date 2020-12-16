@@ -1,16 +1,37 @@
 fileFormatVersion: 2
-guid: 55253cb9bc6b1c84c8311ab743ecf099
+guid: 31174448eba29b14f9e2d117a171897e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9005137711756990497
-    second: map coloni1_0
+      213: 2894764784004171982
+    second: pingo_0
   - first:
-      213: 1606291027104530259
-    second: map coloni1_1
+      213: -5956997000684201267
+    second: pingo_1
   - first:
-      213: 2145230586522065695
-    second: map coloni1_2
+      213: -526831106160288618
+    second: pingo_0
+  - first:
+      213: -6341056420592926996
+    second: pingo_1
+  - first:
+      213: -5377046144348680048
+    second: pingo_2
+  - first:
+      213: -7156984106639374019
+    second: pingo_3
+  - first:
+      213: 6092084075397252793
+    second: pingo_4
+  - first:
+      213: 460352289080575319
+    second: pingo_5
+  - first:
+      213: -2151428518065359033
+    second: pingo_6
+  - first:
+      213: 6823194895345893030
+    second: pingo_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -54,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,33 +129,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: map coloni1_0
+      name: pingo_0
       rect:
         serializedVersion: 2
-        x: 1414
-        y: 55
-        width: 50
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd7204166f2570380800000000000000
-      internalID: -9005137711756990497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map coloni1_1
-      rect:
-        serializedVersion: 2
-        x: 1589
-        y: 56
-        width: 78
+        x: 33
+        y: 260
+        width: 15
         height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35f767cbd21ba4610800000000000000
-      internalID: 1606291027104530259
+      spriteID: 69c90b476e150b8f0800000000000000
+      internalID: -526831106160288618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: map coloni1_2
+      name: pingo_1
       rect:
         serializedVersion: 2
-        x: 1147
-        y: 114
+        x: 78
+        y: 238
         width: 37
-        height: 78
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +164,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1b53fe3ad365cd10800000000000000
-      internalID: 2145230586522065695
+      spriteID: cee39d528ca0008a0800000000000000
+      internalID: -6341056420592926996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pingo_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 234
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09096314505e065b0800000000000000
+      internalID: -5377046144348680048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pingo_3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 234
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39c4a4dfd84dac90800000000000000
+      internalID: -7156984106639374019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pingo_4
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 228
+        width: 45
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b60ed7703e6b8450800000000000000
+      internalID: 6092084075397252793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pingo_5
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 234
+        width: 56
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7558f26c7ff736600800000000000000
+      internalID: 460352289080575319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pingo_6
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 238
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747b11d59279422e0800000000000000
+      internalID: -2151428518065359033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pingo_7
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 237
+        width: 46
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aeb9524b9bd0be50800000000000000
+      internalID: 6823194895345893030
       vertices: []
       indices: 
       edges: []

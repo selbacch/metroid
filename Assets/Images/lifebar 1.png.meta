@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 55253cb9bc6b1c84c8311ab743ecf099
+guid: 022395a5c96348d4386566037d3a775b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9005137711756990497
-    second: map coloni1_0
-  - first:
-      213: 1606291027104530259
-    second: map coloni1_1
-  - first:
-      213: 2145230586522065695
-    second: map coloni1_2
+      213: -4926210682047445077
+    second: lifebar 1_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: map coloni1_0
+      name: lifebar 1_0
       rect:
         serializedVersion: 2
-        x: 1414
-        y: 55
-        width: 50
-        height: 12
+        x: 25
+        y: 211
+        width: 189
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,50 +116,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd7204166f2570380800000000000000
-      internalID: -9005137711756990497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map coloni1_1
-      rect:
-        serializedVersion: 2
-        x: 1589
-        y: 56
-        width: 78
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35f767cbd21ba4610800000000000000
-      internalID: 1606291027104530259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: map coloni1_2
-      rect:
-        serializedVersion: 2
-        x: 1147
-        y: 114
-        width: 37
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1b53fe3ad365cd10800000000000000
-      internalID: 2145230586522065695
+      spriteID: ba7c3df1c7592abb0800000000000000
+      internalID: -4926210682047445077
       vertices: []
       indices: 
       edges: []
