@@ -216,8 +216,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: hit l
-  m_Speed: 1
+  m_Name: DamageL
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -372,8 +372,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: hit r
-  m_Speed: 1
+  m_Name: DamageR
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -605,10 +605,10 @@ AnimatorStateMachine:
     m_Position: {x: 370, y: 490, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -122045247975159891}
-    m_Position: {x: 360, y: 430, z: 0}
+    m_Position: {x: 350, y: 430, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3073796460019571696}
-    m_Position: {x: 600, y: 430, z: 0}
+    m_Position: {x: 580, y: 430, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -940828621698897265}
     m_Position: {x: 600, y: 490, z: 0}
@@ -1018,7 +1018,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: death
+  m_Name: Death
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

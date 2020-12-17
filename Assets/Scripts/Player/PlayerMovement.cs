@@ -265,12 +265,12 @@ public class MovementStats
 
 [RequireComponent(typeof(Rigidbody2D), typeof(GeneralPlayerScript))]
 public class PlayerMovement : MonoBehaviour {
-
+   
     [HideInInspector] public GeneralPlayerScript gps;
     [Header("Estatísticas de velocidade de movimento.")]
     public MovementStats ms;
-    public bool forme = false;
-    public bool estado = false; //para definir o lado do idle  toda vez que for para a esquerda ele ira mudar para true assim trocando o lado do sprite no idle 
+    [HideInInspector] public bool forme = false;
+    [HideInInspector] public bool estado = false; //para definir o lado do idle  toda vez que for para a esquerda ele ira mudar para true assim trocando o lado do sprite no idle 
     public enum State
     {
         //O estado muda quando: O player está inativo.
@@ -332,7 +332,7 @@ public class PlayerMovement : MonoBehaviour {
     private void Update() {
         //Calcula a direção em que o jogador se moverá. (Com base em entrada)
         float direction = DirectionGetter();
-
+        
         //Método de chamadas que gerencia o movimento do jogador através da flutuação de direção.
         MovePlayer(direction);
 
@@ -393,10 +393,31 @@ public class PlayerMovement : MonoBehaviour {
             gps.ac.PlayAnimation(35);// animação morph ball}
         }
 
+        if (GetComponent<Health>().curHealth == 15)
+        {
+            DamageSkin();
+            Debug.Log("foi");
+        }
+
+        if (GetComponent<Health>().curHealth <= 0)
+        {
+            gps.ac.PlayAnimation(Death);
+            Debug.Log("foi aqui carai");
+        }
+
+        if (GetComponent<Health>().hit == true)
+        {
+            gps.ac.PlayAnimation(22);
+            
+            Debug.Log("foi aqui tbm");
+
+        }
     }
 
     private void FixedUpdate()
     {
+       // DamageSkin();
+       
         //Define o Vector2 CurrentVelocity que gerencia a velocidade do corpo.
         ms.CurrentVelocity = new Vector2(ms.CurrentVelocity.x, ms.CurrentVelocity.y);
 
@@ -512,40 +533,44 @@ public class PlayerMovement : MonoBehaviour {
 
   
 
+    //animações convertidas em int
+
+
+ int standR = 0;
+ int standL = 10;
+ int moveR = 1;
+ int moveL = 5;
+ int JumpR = 2;
+ int JumpL = 14;
+ int WjumpR = 3;
+ int WjumpL = 8;
+ int WjExitR = 4;
+ int WjExitL = 7;
+ int WjAfterR = 11;
+ int WjAfterL = 6;
+ int shotR = 30;
+ int shotL = 31;
+ int UshotR = 19;
+ int UshotL = 9;
+ int Urshot = 26;
+int ULshot = 27;
+    int Death = 36;
 
 
 
-public int standR = 0;
-public int standL = 10;
-public int moveR = 1;
-public int moveL = 5;
-public int JumpR = 2;
-public int JumpL = 14;
-public int WjumpR = 3;
-public int WjumpL = 8;
-public int WjExitR = 4;
-public int WjExitL = 7;
-public int WjAfterR = 11;
-public int WjAfterL = 6;
-public int shotR = 30;
-public int shotL = 31;
-public int UshotR = 19;
-public int UshotL = 9;
-public int Urshot = 26;
-public int ULshot = 27;
+private void DamageSkin()
+    {
+   
 
 
-
-
-private void morphBall()
-{
+    }
 
         
 
 
 
-}
-    private void Transfomrme(bool forme)
+
+    private void Transfomrme(bool forme) //troca sprites e arruma colisors
     {
         if (forme == true)
         {
@@ -569,8 +594,8 @@ private void morphBall()
              Urshot = 24;
              ULshot = 24;
 
-            this.transform.FindChild("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(false); // desactivate the box collider 2D
-            this.transform.FindChild("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(false); // desactivate the box collider 2D
+            this.transform.FindChild("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(false); // desativa o colider
+            this.transform.FindChild("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(false); // desativa o colider
 
                    }
 
@@ -594,9 +619,10 @@ private void morphBall()
             UshotL = 9;
             Urshot = 26;
             ULshot = 27;
+            Death = 36;
 
-             this.transform.FindChild("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(true); // desactivate the box collider 2D
-            this.transform.FindChild("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(true); // desactivate the box collider 2D
+             this.transform.FindChild("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(true); // ativa o colider
+            this.transform.FindChild("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(true); // ativa o colider
         }
     }
 

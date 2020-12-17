@@ -14,6 +14,15 @@ TextureImporter:
   - first:
       213: 5652904795008095021
     second: ridley_3
+  - first:
+      213: -1661523197772795841
+    second: ridley_4
+  - first:
+      213: -7531485860665355661
+    second: ridley_5
+  - first:
+      213: -9149049594678515819
+    second: ridley_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -119,7 +128,7 @@ TextureImporter:
         width: 24
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -140,7 +149,7 @@ TextureImporter:
         width: 26
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,7 +170,7 @@ TextureImporter:
         width: 24
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,7 +191,7 @@ TextureImporter:
         width: 137
         height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,6 +199,69 @@ TextureImporter:
       bones: []
       spriteID: d235f8fe5f6237e40800000000000000
       internalID: 5652904795008095021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ridley_4
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 351
+        width: 16
+        height: 33
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f307eaa647511f8e0800000000000000
+      internalID: -1661523197772795841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ridley_5
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 351
+        width: 16
+        height: 33
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3721a246389ca7790800000000000000
+      internalID: -7531485860665355661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ridley_6
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 350
+        width: 16
+        height: 34
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59761cc0edb080180800000000000000
+      internalID: -9149049594678515819
       vertices: []
       indices: 
       edges: []
