@@ -44,15 +44,16 @@ public class MovementStats
 
     #region Keys
     // Chaves usadas para interagir
-    public KeyCode leftKey = KeyCode.LeftArrow, 
-        rightKey = KeyCode.RightArrow, 
+    public KeyCode leftKey = KeyCode.LeftArrow,
+        rightKey = KeyCode.RightArrow,
        Upkey = KeyCode.UpArrow,
         DownKey = KeyCode.DownArrow,
         UlKey = KeyCode.Q,
         UrKey = KeyCode.E,
         jumpKey = KeyCode.S,
-        ActionKey = KeyCode.W;
-       
+        ActionKey = KeyCode.W,
+        ShoKey = KeyCode.D;
+        
     #endregion
 
     [Space]
@@ -265,7 +266,12 @@ public class MovementStats
 
 [RequireComponent(typeof(Rigidbody2D), typeof(GeneralPlayerScript))]
 public class PlayerMovement : MonoBehaviour {
-   
+    public GameObject tiro;
+    public Transform point;
+    public Transform point1;
+    public GameObject tiro1;
+    public float fireRate;
+    public float nextFire;
     [HideInInspector] public GeneralPlayerScript gps;
     [Header("Estatísticas de velocidade de movimento.")]
     public MovementStats ms;
@@ -284,6 +290,10 @@ public class PlayerMovement : MonoBehaviour {
 
         //O estado muda quando: O player está no ar.
         fall,
+        //o estado muda quando o player morre
+        death,
+        //o estado muda quando o player sofre dano
+        hit,
     }
 
     [Header("Você não deve alterar este valor por meio do inspetor,")]
@@ -311,6 +321,7 @@ public class PlayerMovement : MonoBehaviour {
     /// Calcula para qual direção o jogador se moverá com base na entrada.
     /// </summary>
     /// <returns></returns>
+    float tmp = 0;
     public float DirectionGetter()
     {
         /* A direção funciona da seguinte maneira:
@@ -319,11 +330,11 @@ public class PlayerMovement : MonoBehaviour {
          * se a direção for igual a -1, o jogador se moverá para a esquerda.
          * (Usado pelo método MovePlayer.)
          */
-        float tmp = 0;
+        tmp = 0;
         if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.rightKey)) { tmp = 0; }
-        else if (Input.GetKey(ms.leftKey)) { tmp = -1; }
+         else if (Input.GetKey(ms.leftKey)) { tmp = -1; }
         else if (Input.GetKey(ms.rightKey)) { tmp = 1; }
-        else { tmp = 0; }
+       else { tmp = 0; }
 
         return tmp;
     }
@@ -356,7 +367,7 @@ public class PlayerMovement : MonoBehaviour {
             gps.ac.PlayAnimation(WjAfterR);
 
         }
-
+        
         if (Input.GetKey(ms.DownKey)) { down(); }
         if (Input.GetKey(ms.Upkey)) { up(); }
 
@@ -367,7 +378,7 @@ public class PlayerMovement : MonoBehaviour {
             Transfomrme(true);
             
             if (forme = !false) { Transfomrme(false); }
-            gps.ac.PlayAnimation(35);// animação morph ball}
+            gps.ac.PlayAnimation(mptr);// animação morph ball}
         }
 
         if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.DownKey) && Input.GetKeyDown(ms.ActionKey)) //volta ao normal
@@ -381,7 +392,7 @@ public class PlayerMovement : MonoBehaviour {
         {
 
             Transfomrme(true);
-            gps.ac.PlayAnimation(23);// animação morph ball
+            gps.ac.PlayAnimation(mptl);// animação morph ball
 
         }
         if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ActionKey)) //transforma em morphball
@@ -392,29 +403,23 @@ public class PlayerMovement : MonoBehaviour {
             if (forme = !false) { Transfomrme(false); }
             gps.ac.PlayAnimation(35);// animação morph ball}
         }
-
-        if (GetComponent<Health>().curHealth == 15)
+        if (Input.GetKey(ms.ShoKey)) 
         {
-            DamageSkin();
-            Debug.Log("foi");
-        }
 
-        if (GetComponent<Health>().curHealth <= 0)
-        {
-            gps.ac.PlayAnimation(Death);
-            Debug.Log("foi aqui carai");
-        }
-
-        if (GetComponent<Health>().hit == true)
-        {
-            gps.ac.PlayAnimation(22);
             
-            Debug.Log("foi aqui tbm");
+            Shot();
 
         }
-    }
 
-    private void FixedUpdate()
+
+
+        damage();
+        deth();
+
+
+    }
+public bool resp = true;
+private void FixedUpdate()
     {
        // DamageSkin();
        
@@ -531,104 +536,234 @@ public class PlayerMovement : MonoBehaviour {
 
 
 
-  
+
 
     //animações convertidas em int
 
 
- int standR = 0;
- int standL = 10;
- int moveR = 1;
- int moveL = 5;
- int JumpR = 2;
- int JumpL = 14;
- int WjumpR = 3;
- int WjumpL = 8;
- int WjExitR = 4;
- int WjExitL = 7;
- int WjAfterR = 11;
- int WjAfterL = 6;
- int shotR = 30;
- int shotL = 31;
- int UshotR = 19;
- int UshotL = 9;
- int Urshot = 26;
-int ULshot = 27;
-    int Death = 36;
+    int standR = 0;
+    int standL = 1;
+    int moveR = 2;
+    int moveL = 3;
+    int JumpR = 4;
+    int JumpL = 5;
+    int WjumpR = 6;
+    int WjumpL = 26;
+    int WjAfterR = 7;
+    int WjAfterL = 8;
+    int shotR = 25;
+    int shotL = 24;
+    int UshotR = 10;
+    int UshotL = 9;
+    int Urshot = 20;
+    int ULshot = 21;
+    int Death = 13;
+    int Deathr = 14;
+    int hitR = 11;
+    int hitL = 12;
+    int jsr = 27;
+    int downr = 22;
+    int jsl = 28;
+    int downl = 23;
+   int mptr= 15;
+    int mptl= 16;
+    int srunr = 29;
+    int srunl = 30;
+    //morphball stand 17
+    // walk  18
+    //walk l 19
 
 
 
-private void DamageSkin()
+    private void DamageSkin()
     {
-   
 
+       if(GetComponent<Health>().curHealth == 15)
+        {
+            DamageSkin();
+            Debug.Log("foi");
+            
+        }
+
+        if (GetComponent<Health>().curHealth <= 0)
+        {
+            gps.ac.PlayAnimation(Death);
+            Debug.Log("foi aqui carai");
+        }
 
     }
+    private void deth()
+    {
+       
 
+            if (GetComponent<Health>().curHealth <= 0)
+        {
+            ChangeState(State.death);
+           
+            if (estado == false)
+            {
+                
+                gps.ac.PlayAnimation(Death);
+                
+
+            }
+            else if (estado != false)
+            {
+                
+                gps.ac.PlayAnimation(Deathr);
+
+            }
+
+        }
+    }
+    public void damage()
+    {
         
 
+        if (GetComponent<Health>().hit != false)
+        {
+            State hitState = State.hit;
+            ChangeState(hitState);
+            //ChangeState(State.hit);
+
+            if (estado == false)
+            {
+               
+              if(state == hitState)  gps.ac.PlayAnimation(hitR);
+
+                
+            }
+            else if (estado != false)
+            {
+
+                if(state == hitState)  gps.ac.PlayAnimation(hitL);
+                
+            }
+            
 
 
+            Debug.Log("foi aqui tbm");
 
+        }
+
+    }
     private void Transfomrme(bool forme) //troca sprites e arruma colisors
     {
+        //morphball tran 15
+        //morphball tranl 16
+        //morphball stand 17
+        // walk  18
+        //walk l 19
         if (forme == true)
         {
-             standR = 25;
-             standL = 25;
-             moveR = 34;
-             moveL = 24;
+             standR = 17;
+             standL = 17;
+             moveR = 18;
+             moveL = 19;
             ms.isGrounded = false;
-             JumpR = 24;
-             JumpL = 24;
-             WjumpR = 25;
-             WjumpL = 25;
-             WjExitR = 24;
-             WjExitL = 24;
-             WjAfterR = 24;
-             WjAfterL = 24;
-             shotR = 24;
-             shotL = 24;
-             UshotR = 24;
-             UshotL = 24;
-             Urshot = 24;
-             ULshot = 24;
+             JumpR = 18;
+             JumpL = 19;
+             WjumpR = 18;
+             WjumpL = 19;
+             
+             WjAfterR = 15;
+             WjAfterL = 19;
+             shotR = 18;
+             shotL = 19;
+             UshotR = 18;
+             UshotL = 19;
+             Urshot = 18;
+             ULshot = 19;
 
-            this.transform.FindChild("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(false); // desativa o colider
-            this.transform.FindChild("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(false); // desativa o colider
+            this.transform.Find("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(false); // desativa o colider
+            this.transform.Find("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(false); // desativa o colider
 
                    }
 
         if (forme != true)
         {
-            standR = 0;
-            standL = 10;
-            moveR = 1;
-            moveL = 5;
-            JumpR = 2;
-            JumpL = 14;
-            WjumpR = 3;
-            WjumpL = 8;
-            WjExitR = 4;
-            WjExitL = 7;
-            WjAfterR = 11;
-            WjAfterL = 6;
-            shotR = 30;
-            shotL = 31;
-            UshotR = 19;
-            UshotL = 9;
-            Urshot = 26;
-            ULshot = 27;
-            Death = 36;
+             standR = 0;
+             standL = 1;
+             moveR = 2;
+             moveL = 3;
+             JumpR = 4;
+             JumpL = 5;
+             WjumpR = 6;
+             WjumpL = 26;
+             WjAfterR = 7;
+             WjAfterL = 8;
+             shotR = 25;
+             shotL = 24;
+             UshotR = 9;
+             UshotL = 10;
+             Urshot = 20;
+             ULshot = 21;
+             Death = 13;
+            Deathr = 14;
+            hitR = 11;
+            hitL = 12;
 
-             this.transform.FindChild("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(true); // ativa o colider
-            this.transform.FindChild("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(true); // ativa o colider
+            downr = 22;
+            downl = 23;
+             this.transform.Find("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(true); // ativa o colider
+            this.transform.Find("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(true); // ativa o colider
         }
     }
 
 
 
+    private void Shot()
+    {
 
+        if (estado == false)
+        {
+
+
+
+
+
+            if (ms.isGrounded == true)
+
+            { 
+            
+            gps.ac.PlayAnimation(shotR);
+                nextFire = Time.time + fireRate;
+                GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
+                
+            
+            
+            }
+
+            
+
+
+        }
+         if (estado != false)
+        {
+
+            if (ms.isGrounded == true) gps.ac.PlayAnimation(shotL);
+            GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
+        }
+        if (estado == false)
+        {
+            if (ms.isGrounded == false) gps.ac.PlayAnimation(jsr);
+            GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
+
+
+        }
+        if (estado != false)
+        {
+
+            if (ms.isGrounded == false) gps.ac.PlayAnimation(jsl);
+
+        }
+        if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.ShoKey) && ms.isGrounded != false)
+        {
+            GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
+            gps.ac.PlayAnimation(29);
+        }
+
+    }
 
 
     /// <summary>
@@ -729,7 +864,7 @@ private void DamageSkin()
 
         if (state == State.idle)
         {
-
+            Debug.Log("tadentro");
             if (estado == false)
             {
                 gps.ac.PlayAnimation(standR);
@@ -776,13 +911,13 @@ private void DamageSkin()
 
             if (estado == false)
             {
-                gps.ac.PlayAnimation(9);
+                gps.ac.PlayAnimation(UshotR);
                 //if (tmp1 == -1) if (state == moveState) gps.ac.PlayAnimation(10);
             }
             if (estado != false)
             {
                 //Debug.Log("agaixou");
-                gps.ac.PlayAnimation(19);
+                gps.ac.PlayAnimation(UshotL);
             }
 
         }
@@ -901,18 +1036,8 @@ private void DamageSkin()
         //Define o bool verificando se o jogador está tocando o solo.
         ms.isGrounded = true;
 
-        if (ms.isGrounded = true)
-        {
-            if (estado == false)
-            {
-
-                gps.ac.PlayAnimation(13);
-            }
-            if (estado != false)
-            {
-                gps.ac.PlayAnimation(12);
-            }
-        }
+       
+    
     
        
         //animação de cair no solo
@@ -978,11 +1103,12 @@ private void DamageSkin()
         if (state == wallState)
         {
             float direction = DirectionGetter();
-
-            if (direction == 1)   gps.ac.PlayAnimation(3);
+             
+             
+            if (direction == 1)   gps.ac.PlayAnimation(WjumpR);
         
 
-        if (direction == -1) gps.ac.PlayAnimation(8);
+        if (direction == -1) gps.ac.PlayAnimation(WjumpL);
         
             
 
@@ -1003,7 +1129,7 @@ private void DamageSkin()
         ChangeState(fallState);
 
         //Reproduz animação apenas se o jogador não estiver aterrado (Não reproduz se o jogador estiver na parede e ao mesmo tempo no chão).
-        if (state == fallState) gps.ac.PlayAnimation(4);
+        if (state == fallState) gps.ac.PlayAnimation(WjAfterR);
 
         //Adiciona o aumento de velocidade horizontal temporário ao pular de uma parede.
         ms.ChangeMoveSpeedAdditions(ms.wallSpeedAdd);

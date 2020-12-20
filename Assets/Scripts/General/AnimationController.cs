@@ -93,10 +93,10 @@ public class AnimationController : MonoBehaviour {
     /// <param name="animation">Animation to play.</param>
     private void PlayAnimation(CustomAnimation animation)
     {
-        //Checks if PlayAnimation can be performed.
+       
         CheckNullException();
 
-        //Stores the animation's name into a string.
+        //procura animação pelo nome.
         string animationN = animation.animationName;
 
         if (animation == lastAnimationPlayed && !lastAnimationPlayed.repeatable)
