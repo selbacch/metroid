@@ -270,6 +270,18 @@ public class PlayerMovement : MonoBehaviour {
     public Transform point;
     public Transform point1;
     public GameObject tiro1;
+    public Transform point2;
+    public GameObject tiro2;
+    public Transform point3;
+    public GameObject tiro3;
+    public Transform point4;
+    public GameObject tiro4;
+    public Transform point5;
+    public GameObject tiro5;
+    public Transform point6;
+    public GameObject tiro6;
+    public Transform point7;
+    public GameObject tiro7;
     public float fireRate;
     public float nextFire;
     [HideInInspector] public GeneralPlayerScript gps;
@@ -294,6 +306,8 @@ public class PlayerMovement : MonoBehaviour {
         death,
         //o estado muda quando o player sofre dano
         hit,
+        
+        
     }
 
     [Header("Você não deve alterar este valor por meio do inspetor,")]
@@ -369,7 +383,8 @@ public class PlayerMovement : MonoBehaviour {
         }
         
         if (Input.GetKey(ms.DownKey)) { down(); }
-        if (Input.GetKey(ms.Upkey)) { up(); }
+        if (Input.GetKey(ms.Upkey)) { up();  u = true; }
+        if (Input.GetKeyUp(ms.Upkey)) { up(); u = false; }
 
 
         if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ActionKey)) //transforma em morphball
@@ -403,18 +418,16 @@ public class PlayerMovement : MonoBehaviour {
             if (forme = !false) { Transfomrme(false); }
             gps.ac.PlayAnimation(35);// animação morph ball}
         }
-        if (Input.GetKey(ms.ShoKey)) 
-        {
+       
+        
+        
+        
+        Shot();
 
-            
-            Shot();
-
-        }
-
-
-
-        damage();
         deth();
+        damage();
+
+
 
 
     }
@@ -534,7 +547,7 @@ private void FixedUpdate()
         ms.isWallJumping = false;
     }
 
-
+    
 
 
 
@@ -594,57 +607,75 @@ private void FixedUpdate()
     }
     private void deth()
     {
-       
 
-            if (GetComponent<Health>().curHealth <= 0)
+
+        if (GetComponent<Health>().curHealth <= 0)
         {
             ChangeState(State.death);
-           
-            if (estado == false)
-            {
-                
-                gps.ac.PlayAnimation(Death);
-                
+            
+            
+                if (estado == false)
+                {
 
-            }
-            else if (estado != false)
-            {
-                
-                gps.ac.PlayAnimation(Deathr);
+                    gps.ac.PlayAnimation(Death);
 
-            }
 
+                }
+                else if (estado != false)
+                {
+
+                    gps.ac.PlayAnimation(Deathr);
+
+                }
+
+            
         }
     }
-    public void damage()
+   private void damage()
     {
+
+
         
-
         if (GetComponent<Health>().hit != false)
-        {
-            State hitState = State.hit;
-            ChangeState(hitState);
-            //ChangeState(State.hit);
-
-            if (estado == false)
             {
-               
-              if(state == hitState)  gps.ac.PlayAnimation(hitR);
+
+
+                if (estado == false && ms.isGrounded == true)
+                {
+
+                    gps.ac.PlayAnimation(hitR);
+
+                
+                }
+                if (estado != false && ms.isGrounded == true)
+                {
+                State hitState = State.hit;
+                
+                ChangeState(hitState);
+                gps.ac.PlayAnimation(hitL);
+                
+                }
+                if (estado == false && ms.isGrounded != true)
+                {
+                State hitState = State.hit;
+
+                ChangeState(hitState);
+                gps.ac.PlayAnimation(hitR);
 
                 
             }
-            else if (estado != false)
-            {
+                if (estado != false && ms.isGrounded != true)
+                {
 
-                if(state == hitState)  gps.ac.PlayAnimation(hitL);
-                
+                    gps.ac.PlayAnimation(hitL);
+
+                }
+
+
+                Debug.Log("foi aqui tbm");
+
             }
-            
-
-
-            Debug.Log("foi aqui tbm");
-
-        }
+        
 
     }
     private void Transfomrme(bool forme) //troca sprites e arruma colisors
@@ -711,65 +742,73 @@ private void FixedUpdate()
     }
 
 
-
-    private void Shot()
+    bool s = true;
+    void Shot()
     {
 
-        if (estado == false)
+
+
+
+
+        if (Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == true && s == true)
         {
 
 
+            gps.ac.PlayAnimation(shotR); // atira para direita
 
-
-
-            if (ms.isGrounded == true)
-
-            { 
-            
-            gps.ac.PlayAnimation(shotR);
-                nextFire = Time.time + fireRate;
-                GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
-                
-            
-            
-            }
-
-            
-
+            GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
 
         }
-         if (estado != false)
+        if (Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == true && u!=false)
         {
 
-            if (ms.isGrounded == true) gps.ac.PlayAnimation(shotL);
+            gps.ac.PlayAnimation(shotL);  // atira para esquerda
             GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
         }
-        if (estado == false)
+        if (Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == false)
         {
-            if (ms.isGrounded == false) gps.ac.PlayAnimation(jsr);
+            gps.ac.PlayAnimation(jsr);   // atira para direita no ar
             GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
 
 
         }
-        if (estado != false)
+        if (Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == false)
         {
 
-            if (ms.isGrounded == false) gps.ac.PlayAnimation(jsl);
+
+            {
+                gps.ac.PlayAnimation(jsl); //atira para esquerda no ar
+                GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
+
+
+            }
+            if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.ShoKey) && ms.isGrounded != false)
+            {
+                GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
+                gps.ac.PlayAnimation(29);
+            }
+            if (Input.GetKey(ms.Upkey) && Input.GetKey(ms.ShoKey) && ms.isGrounded != false && u == true)
+            {
+                GameObject CloneTiro = Instantiate(tiro2, point2.position, point.rotation);
+                
+            }
+
+
+
 
         }
-        if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.ShoKey) && ms.isGrounded != false)
-        {
-            GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
-            gps.ac.PlayAnimation(29);
-        }
+
 
     }
 
 
+
+      
+
     /// <summary>
     /// Método que faz o jogador pular do chão.
     /// </summary>
-    private void GroundJump()
+        private void GroundJump()
     {
         if (ms.isGrounded != false)// realiza o salto somente se ele estiver encostando no chão 
         {
@@ -864,7 +903,7 @@ private void FixedUpdate()
 
         if (state == State.idle)
         {
-            Debug.Log("tadentro");
+            ;
             if (estado == false)
             {
                 gps.ac.PlayAnimation(standR);
@@ -903,7 +942,7 @@ private void FixedUpdate()
     }
 
 
-
+    public bool u = false;
     private void up() //realiza a animação de mirar para cima somente quando o playes estiver encostando no chão
     {
         if (ms.isGrounded != false)
@@ -939,12 +978,18 @@ private void FixedUpdate()
                 //Usado para evitar o estado inativo constante.
                 case State.idle:
                     if (state == State.move || state == State.fall && ms.isGrounded)
-                        tmp = true;
+                      tmp = true;
                     break;
                 //Usado para evitar o estado de movimento constante.
                 case State.move:
-                    if (state == State.idle || ms.isGrounded)
+                    if (state == State.idle && ms.isGrounded)
                         tmp = true;
+                    break;
+                case State.death:
+                    tmp = true;
+                    break;
+                case State.hit:
+                    tmp = true;
                     break;
                 case State.wall:
                     //Nota: Você pode cancelar o comentário se não quiser que o jogador salte na parede quando estiver no chão.

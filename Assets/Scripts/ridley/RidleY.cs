@@ -1,119 +1,184 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Utilities;
 
-[System.Serializable]
-public struct Constraintis
+public class Ridley : MonoBehaviour
 {
-    /// <summary>
-    ///  Se verdadeiro, o objeto não será capaz de ir abaixo <see cref="MaxNegativePosition"/> ou acima <see cref="MaxPositivePosition"/>.
-    /// </summary>
-    public bool IsConstrained;
-    public Vector2 MaxNegativePosition;
-    public Vector2 MaxPositivePosition;
+    [HideInInspector] public fogo fire;
+    public GameObject fogo;
+    public Transform point;
+    public float Speed = 1;
+    public Transform Target;
+    public Transform Target2;
+    public bool TEvi = false;
+    public float TargetDistance = 5;
+    public Collider2D target1;
+    public bool dis = false;
+    public float cronometro;
+    private Vector3 posicaoinicial;
+    public Vector3 direction;
+
+
+
+    void Start() { posicaoinicial = Target2.position - transform.position; }
+    void Update()
+    {
+        if (TEvi != false)
+        {
+
+
+            hunt();
+            
+
+        }
+    }
+
+
+    void hunt()
+    {
+        cronometro += Time.deltaTime;
+        // Padrão: ir na direção do alvo
+        direction = Target.position - transform.position;
+               // direction.y = 0;
+                float distanceToTarget = direction.magnitude;
+
+                direction.Normalize();
+
+                // Mas se ja estiver perto demais, na verdade quero fugir.
+                // Inverte a direção anterior.
+                if (distanceToTarget < TargetDistance)
+                {
+                    direction = -direction;
+            
+                  }
+                
+                
+            
+        
+        if (distanceToTarget == TargetDistance)
+        {
+            System.Random r = new System.Random();
+            int randomIndex = r.Next(3);
+            atack(randomIndex);
+        }
+        
+            
+        
+
+        
+
+        // Faz o movimento terminar exatamente em cima do alvo
+        float distanceWantsToMoveThisFrame = Speed * Time.deltaTime;
+                float actualMovementThisFrame = Mathf.Min(Mathf.Abs(distanceToTarget - TargetDistance), distanceWantsToMoveThisFrame);
+
+                MoveCharacter(actualMovementThisFrame * direction);
+            }
+        
+
+        void MoveCharacter(Vector3 frameMovement)
+        {
+            transform.position += frameMovement;
+        }
+
+
+
+
+
+
+    void atack(int randomIndex)
+    {
+
+        
+
+        Debug.Log(randomIndex);
     
-}
+       switch (randomIndex) {
 
-public class RidleY : MonoBehaviour
-{
 
-    [Header("Posição desejada para alcançar.")]
-    public Transform target;
+         case 1:
+                cronometro = 0;
+                TargetDistance = 0;
+              Speed = 25;
+            if (cronometro >= 4) volta();
+                break;
 
-    public Constraintis constraints;
-    // Autoexplicativo, lol
-    public float speed;
+            case 2:
+                cronometro = 0;
+                TargetDistance = 5;
+               Debug.Log("labareda");
+                GameObject.Find("Labareda").GetComponent<ParticleSystem>().Play();
+                
+               
+                if (cronometro >= 6) Debug.Log("labareda fim "); volta(); GameObject.Find("Labareda").GetComponent<ParticleSystem>().Stop();
+        
+       break;
+        }
+    }           
 
-    [Header("Define a taxa de aceleração por distância para velocidade.")]
-    public float accelerationSpeed;
-
-    [Header("Se for falso, o accelerationSpeed ​​será ignorado.")]
-    public bool accelerates = true;
-
-    [Header("Se for falso, o objeto irá parar de se mover em direção ao alvo.")]
-    public bool canMove = true;
-
-    [Header("Se verdadeiro, a posição Z do objeto permanecerá na posição Z fixa ")]
-    public bool fixedZPosition = true;
-
-    [Rename("Posição Z fixa")] public float fixedZPos = -1;
-
-    //Usado para verificar se o objeto pode se mover com base nas condições abaixo. (USADO SOMENTE POR ActCanFollow BOOL).
-    private bool ActCanFollowFunc()
+    void volta()
     {
-        bool tmp = false;
-        if (target != null && canMove) tmp = true;
+        Debug.Log("quase");
+      
+        Speed = 3; TargetDistance = 10;
+        float voltas = direction.magnitude; 
+          direction = -direction;
 
-        return tmp;
+
+       
+
+
     }
 
-    //Verifica se o objeto pode seguir o destino, retornando ActCanFollowFunc.
-    protected bool ActCanFollow { get { return ActCanFollowFunc(); } }
 
-    void Start()
+
+
+
+
+
+
+
+
+
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        // Se o alvo não foi definido, o objeto atual se tornará o alvo.
-        if (target == null)
+        // If the player hits the trigger.
+        if (collider.gameObject.tag == "Player")
+
         {
-            target = transform;
+
+            TEvi = true;
+            // More on game controller shortly.
+            Debug.Log("foi");
+          
         }
 
-    }
+        //accelerationSpeed = 0.1f;
 
-    void FixedUpdate()
-    {
-        OnFixed();
-    }
-
-    public virtual void OnFixed()
-    {
-        FollowTarget();
 
 
     }
-
-    /// <summary>
-    ///Segue a corrente <see cref="target"/>
-    /// </summary>
-    protected void FollowTarget()
-    {
-        //Se as condições não forem atendidas, o método será retornado.
-        if (!ActCanFollow)
-            return;
-
-        Vector3 movement = Utilities.MoveTowardsAccelerated(transform, target, speed, accelerationSpeed * Time.smoothDeltaTime);
-        // Dois flutuadores que serão fixados e como os valores do vetor.
-        float clampedX = movement.x;
-        float clampedY = movement.y;
-
-        //Armazena a posição z para o bool fixedZPosition.
-        float zPos = movement.z;
-
-        // Fixa ambos os valores se IsConstained for true.
-
-
-        if (constraints.IsConstrained)
-        {
-            clampedX = Mathf.Clamp(clampedX, constraints.MaxNegativePosition.x, constraints.MaxPositivePosition.x);
-            clampedY = Mathf.Clamp(clampedY, constraints.MaxNegativePosition.y, constraints.MaxPositivePosition.y);
-        }
-
-        // Se verdadeiro, zPos será alterado para fixedZPos para fazer uma posição z fixa.
-        if (fixedZPosition) { zPos = fixedZPos; }
-
-        // Re-armazena todos os valores calculados para o vetor passado.
-        movement = new Vector3(clampedX, clampedY, zPos);
-        // Passa o vetor de movimento para a transformação do objeto.
-        transform.position = movement;
-    }
-
-    // if(GetComponent<colide>().m !=false){
-      //  GetComponent.toca.tocaEfeito1();}
 }
 
+   // void OnTriggerExit2D(Collider2D collider)
+    //{
+        // If the player hits the trigger.
+      //  if (collider.gameObject.tag == "Player")
 
 
+        //{
+
+
+           
+            // More on game controller shortly.
+          //  Debug.Log("foi");
+            //this.transform.Find("Ridley").GetComponent<toca>().PararEfeito();
+
+
+            //accelerationSpeed = 0.1f;
+
+
+  //      }
+    //}
 
 
 

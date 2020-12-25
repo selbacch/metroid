@@ -8,6 +8,7 @@ TagManager:
   - visao
   - Renderizador
   - tiro1
+  - Fogo
   layers:
   - Default
   - TransparentFX
