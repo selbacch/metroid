@@ -38,7 +38,7 @@ public class raio : MonoBehaviour
         {
 
 
-            myLight.intensity = 2.5f;
+            myLight.intensity = 1.5f;
 
         }
 

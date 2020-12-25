@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - chuva
+  - visao
   - Renderizador
+  - tiro1
+  - Fogo
   layers:
   - Default
   - TransparentFX

@@ -308,6 +308,132 @@ TextureImporter:
   - first:
       213: 7969827223237681936
     second: samus trabalho2_101
+  - first:
+      213: 3333155866106228020
+    second: samus trabalho2_102
+  - first:
+      213: -1004586403559658962
+    second: samus trabalho2_103
+  - first:
+      213: -5184202440324235324
+    second: samus trabalho2_104
+  - first:
+      213: -6972118751983997756
+    second: samus trabalho2_105
+  - first:
+      213: 2095494983361351470
+    second: samus trabalho2_106
+  - first:
+      213: 6680631714556106089
+    second: samus trabalho2_107
+  - first:
+      213: 3106048791395357499
+    second: samus trabalho2_108
+  - first:
+      213: 8429035403664042477
+    second: samus trabalho2_109
+  - first:
+      213: 8887655124842812701
+    second: samus trabalho2_110
+  - first:
+      213: 2312658531647593482
+    second: samus trabalho2_111
+  - first:
+      213: -4207280146945007021
+    second: samus trabalho2_112
+  - first:
+      213: 2623837802376856808
+    second: samus trabalho2_113
+  - first:
+      213: 1979639504820466406
+    second: samus trabalho2_114
+  - first:
+      213: 3676624791277883321
+    second: samus trabalho2_115
+  - first:
+      213: -4815028346956795116
+    second: samus trabalho2_116
+  - first:
+      213: -1342751270590899679
+    second: samus trabalho2_117
+  - first:
+      213: 2272370867431645992
+    second: samus trabalho2_118
+  - first:
+      213: -1159718495156590151
+    second: samus trabalho2_20
+  - first:
+      213: -5759010327900344041
+    second: samus trabalho2_119
+  - first:
+      213: 6554977179647284493
+    second: samus trabalho2_120
+  - first:
+      213: -4758969044496500355
+    second: samus trabalho2_121
+  - first:
+      213: -1330574269703579389
+    second: samus trabalho2_122
+  - first:
+      213: 5103660446806833465
+    second: samus trabalho2_123
+  - first:
+      213: -1043889192388908997
+    second: samus trabalho2_124
+  - first:
+      213: 2679533633565524303
+    second: samus trabalho2_125
+  - first:
+      213: 1395641448191649819
+    second: samus trabalho2_126
+  - first:
+      213: 2929993702491294384
+    second: samus trabalho2_127
+  - first:
+      213: 6887115233106092741
+    second: samus trabalho2_128
+  - first:
+      213: 6522630615835133293
+    second: samus trabalho2_129
+  - first:
+      213: -2756462286148650588
+    second: samus trabalho2_130
+  - first:
+      213: -9157563017013037512
+    second: samus trabalho2_131
+  - first:
+      213: -3530997997872239439
+    second: samus trabalho2_132
+  - first:
+      213: -747010497777365434
+    second: samus trabalho2_133
+  - first:
+      213: 8146990182060983356
+    second: samus trabalho2_134
+  - first:
+      213: 3615678815227733495
+    second: samus trabalho2_135
+  - first:
+      213: 3490619859875443123
+    second: samus trabalho2_136
+  - first:
+      213: 4036196145915421701
+    second: samus trabalho2_137
+  - first:
+      213: -7967742237287060177
+    second: samus trabalho2_138
+  - first:
+      213: -3839249263830413506
+    second: samus trabalho2_139
+  - first:
+      213: -7336241946459396411
+    second: samus trabalho2_140
+  - first:
+      213: -2324869519926349434
+    second: samus trabalho2_141
+  - first:
+      213: -5022199542420559746
+    second: samus trabalho2_142
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -820,27 +946,6 @@ TextureImporter:
       bones: []
       spriteID: bb654e44ae6b5b210800000000000000
       internalID: 1348184780761749179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: samus trabalho2_20
-      rect:
-        serializedVersion: 2
-        x: 1098
-        y: 508
-        width: 16
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53d76fcf66ade9890800000000000000
-      internalID: -7449276597758689995
       vertices: []
       indices: 
       edges: []
@@ -1378,8 +1483,8 @@ TextureImporter:
         y: 339
         width: 15
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1399,8 +1504,8 @@ TextureImporter:
         y: 338
         width: 15
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1420,8 +1525,8 @@ TextureImporter:
         y: 338
         width: 21
         height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1441,8 +1546,8 @@ TextureImporter:
         y: 329
         width: 26
         height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 4, z: 6, w: 1}
       outline: []
       physicsShape: []
@@ -1462,8 +1567,8 @@ TextureImporter:
         y: 321
         width: 30
         height: 64
-      alignment: 9
-      pivot: {x: 0.45227864, y: 0.5223708}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 14, z: 9, w: 3}
       outline: []
       physicsShape: []
@@ -1483,8 +1588,8 @@ TextureImporter:
         y: 325
         width: 42
         height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 13, y: 13, z: 12, w: 3}
       outline: []
       physicsShape: []
@@ -1504,8 +1609,8 @@ TextureImporter:
         y: 322
         width: 55
         height: 75
-      alignment: 9
-      pivot: {x: 0.50455654, y: 0.5739689}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 21, y: 21, z: 14, w: 12}
       outline: []
       physicsShape: []
@@ -1525,8 +1630,8 @@ TextureImporter:
         y: 314
         width: 70
         height: 87
-      alignment: 9
-      pivot: {x: 0.47954798, y: 0.44651636}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 25, y: 21, z: 23, w: 27}
       outline: []
       physicsShape: []
@@ -1546,8 +1651,8 @@ TextureImporter:
         y: 329
         width: 22
         height: 38
-      alignment: 9
-      pivot: {x: 0.45119408, y: 0.6789655}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2500,6 +2605,930 @@ TextureImporter:
       bones: []
       spriteID: 013e15232a38a9e60800000000000000
       internalID: 7969827223237681936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_58
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 92
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5376b3f32bd9a00800000000000000
+      internalID: 764963496372155846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_59
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 40
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10ad8800e7bd95d0800000000000000
+      internalID: -3054082799443271649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_102
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 311
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d6544b99fb14e20800000000000000
+      internalID: 3333155866106228020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_103
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 311
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2aa3ad0dfdfe02f0800000000000000
+      internalID: -1004586403559658962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_104
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 311
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfb2ccf8530e08b0800000000000000
+      internalID: -5184202440324235324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_105
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 310
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc67285fee0e3f90800000000000000
+      internalID: -6972118751983997756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_106
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 304
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2fcddfb591b41d10800000000000000
+      internalID: 2095494983361351470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_107
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 307
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965535d162f56bc50800000000000000
+      internalID: 6680631714556106089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_108
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 306
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33d6225be6ea1b20800000000000000
+      internalID: 3106048791395357499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_109
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 306
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9269a6a03f9f470800000000000000
+      internalID: 8429035403664042477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_110
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 306
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d159f6a4f3b475b70800000000000000
+      internalID: 8887655124842812701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_111
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 307
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c91a97ea6381020800000000000000
+      internalID: 2312658531647593482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_112
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 306
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3522aca5ffcbc95c0800000000000000
+      internalID: -4207280146945007021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_20
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 501
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9adb05c2ad7efe0800000000000000
+      internalID: -1159718495156590151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_113
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 495
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e40aee549eb96420800000000000000
+      internalID: 2623837802376856808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_114
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 494
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2772c14a7197b10800000000000000
+      internalID: 1979639504820466406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_115
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 497
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf4380a4cef50330800000000000000
+      internalID: 3676624791277883321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_116
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 497
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4133434ca359d2db0800000000000000
+      internalID: -4815028346956795116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_117
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 491
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a99b665d69d5de0800000000000000
+      internalID: -1342751270590899679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_118
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 491
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823a53fa345198f10800000000000000
+      internalID: 2272370867431645992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_119
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 496
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711b1bb8e92e310b0800000000000000
+      internalID: -5759010327900344041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_120
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 501
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d051bafd305f7fa50800000000000000
+      internalID: 6554977179647284493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_121
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 499
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79b4bd3edeb4fdb0800000000000000
+      internalID: -4758969044496500355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_122
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 431
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3091b0b50c9d88de0800000000000000
+      internalID: -1330574269703579389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_123
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 435
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939f122d228d3d640800000000000000
+      internalID: 5103660446806833465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_124
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 428
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b382ace6f4c5381f0800000000000000
+      internalID: -1043889192388908997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_125
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 425
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41826894ad9f2520800000000000000
+      internalID: 2679533633565524303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_126
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 425
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b186641b0805e5310800000000000000
+      internalID: 1395641448191649819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_127
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 429
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba0027afbd69a820800000000000000
+      internalID: 2929993702491294384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_128
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 429
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c26874a0d2f39f50800000000000000
+      internalID: 6887115233106092741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_129
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 429
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65c0f99cf9058a50800000000000000
+      internalID: 6522630615835133293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_130
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 427
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a93955b7241fb9d0800000000000000
+      internalID: -2756462286148650588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_131
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 433
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836fea274fcc9e080800000000000000
+      internalID: -9157563017013037512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_132
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 336
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bca53a67006ffec0800000000000000
+      internalID: -3530997997872239439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_133
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 336
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e0e7cf8e512a5f0800000000000000
+      internalID: -747010497777365434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_134
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 336
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34075ee76cef0170800000000000000
+      internalID: 8146990182060983356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_135
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 335
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5ed8bc9b87d2230800000000000000
+      internalID: 3615678815227733495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_136
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 329
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1bcc9b44c217030800000000000000
+      internalID: 3490619859875443123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_137
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 332
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504e6119203730830800000000000000
+      internalID: 4036196145915421701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_138
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 331
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2de0ac66a4ec6190800000000000000
+      internalID: -7967742237287060177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_139
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 331
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f4531c22f38bac0800000000000000
+      internalID: -3839249263830413506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_140
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 331
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6a7fa91de603a90800000000000000
+      internalID: -7336241946459396411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_141
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 332
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68138a34d776cbfd0800000000000000
+      internalID: -2324869519926349434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_142
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 331
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78a4eaff109d4ab0800000000000000
+      internalID: -5022199542420559746
       vertices: []
       indices: 
       edges: []
