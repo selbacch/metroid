@@ -426,7 +426,7 @@ public class PlayerMovement : MonoBehaviour {
 
         deth();
         damage();
-
+        
 
 
 
@@ -434,7 +434,7 @@ public class PlayerMovement : MonoBehaviour {
 public bool resp = true;
 private void FixedUpdate()
     {
-       // DamageSkin();
+        DamageSkin();
        
         //Define o Vector2 CurrentVelocity que gerencia a velocidade do corpo.
         ms.CurrentVelocity = new Vector2(ms.CurrentVelocity.x, ms.CurrentVelocity.y);
@@ -591,19 +591,16 @@ private void FixedUpdate()
     private void DamageSkin()
     {
 
-       if(GetComponent<Health>().curHealth == 15)
+       if(GetComponent<Health>().curHealth <= 15)
         {
-            DamageSkin();
-            Debug.Log("foi");
-            
+            Debug.Log("skin de dano");
+            standR = 31;
+            standL = 32;
+            moveR = 33;
+            moveL = 34;
         }
 
-        if (GetComponent<Health>().curHealth <= 0)
-        {
-            gps.ac.PlayAnimation(Death);
-            Debug.Log("foi aqui carai");
-        }
-
+       
     }
     private void deth()
     {
@@ -993,7 +990,7 @@ private void FixedUpdate()
                     break;
                 case State.wall:
                     //Nota: Você pode cancelar o comentário se não quiser que o jogador salte na parede quando estiver no chão.
-                    if (!ms.isGrounded) tmp = true;
+                   // if (!ms.isGrounded) tmp = true;
                     break;
                 default: tmp = true; break;
             }

@@ -6,6 +6,7 @@ public class TransicaoCena : MonoBehaviour
     [SerializeField] private Animator animator;
     private int cenaIndice;
     public AudioClip clip;
+    public string cena;
     public float volume=1;
     private void Update()
     {
@@ -25,7 +26,7 @@ public class TransicaoCena : MonoBehaviour
     //Esse método é chamado no final da animação
     public void TrocaCena()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(cena);
     }
 
 

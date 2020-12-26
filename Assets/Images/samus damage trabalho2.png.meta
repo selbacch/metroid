@@ -1,7 +1,142 @@
 fileFormatVersion: 2
 guid: 4607ccda192472c45bcccbf995c6e513
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5718932468985468154
+    second: samus damage trabalho2_0
+  - first:
+      213: -1307555395004139411
+    second: samus damage trabalho2_1
+  - first:
+      213: 1924091207115654200
+    second: samus damage trabalho2_2
+  - first:
+      213: 984016761071632441
+    second: samus damage trabalho2_3
+  - first:
+      213: -8803720718343161725
+    second: samus damage trabalho2_4
+  - first:
+      213: 5037530631634572703
+    second: samus damage trabalho2_5
+  - first:
+      213: 3229625717947616184
+    second: samus damage trabalho2_6
+  - first:
+      213: 8557930833688033378
+    second: samus damage trabalho2_7
+  - first:
+      213: 8789616103711328104
+    second: samus damage trabalho2_8
+  - first:
+      213: -1667923449566726567
+    second: samus damage trabalho2_9
+  - first:
+      213: -7261402315485396220
+    second: samus damage trabalho2_10
+  - first:
+      213: 1550124840398184108
+    second: samus damage trabalho2_11
+  - first:
+      213: -72730533145529850
+    second: samus damage trabalho2_12
+  - first:
+      213: -6260394448798378983
+    second: samus damage trabalho2_13
+  - first:
+      213: 378974942958563425
+    second: samus damage trabalho2_14
+  - first:
+      213: -5142758944336893842
+    second: samus damage trabalho2_15
+  - first:
+      213: -5963648098829220525
+    second: samus damage trabalho2_16
+  - first:
+      213: 4432385811316183101
+    second: samus damage trabalho2_17
+  - first:
+      213: -8624565204168640215
+    second: samus damage trabalho2_18
+  - first:
+      213: 6551286385153949196
+    second: samus damage trabalho2_19
+  - first:
+      213: -8557648016372472455
+    second: samus damage trabalho2_20
+  - first:
+      213: -7648472925136845642
+    second: samus damage trabalho2_21
+  - first:
+      213: 4555758500257101465
+    second: samus damage trabalho2_22
+  - first:
+      213: -5256734357637440711
+    second: samus damage trabalho2_23
+  - first:
+      213: 6498204821493746422
+    second: samus damage trabalho2_24
+  - first:
+      213: -3440009491750986793
+    second: samus damage trabalho2_25
+  - first:
+      213: 4584425118745829031
+    second: samus damage trabalho2_26
+  - first:
+      213: 4311281635809317222
+    second: samus damage trabalho2_27
+  - first:
+      213: 4303006363578459081
+    second: samus damage trabalho2_28
+  - first:
+      213: -5334439496195888105
+    second: samus damage trabalho2_29
+  - first:
+      213: -5784612933313804416
+    second: samus damage trabalho2_30
+  - first:
+      213: 1726014483351472898
+    second: samus damage trabalho2_31
+  - first:
+      213: -1126467510562997653
+    second: samus damage trabalho2_32
+  - first:
+      213: -217465428339565031
+    second: samus damage trabalho2_33
+  - first:
+      213: -2070936054248628045
+    second: samus damage trabalho2_34
+  - first:
+      213: 8354832873203146648
+    second: samus damage trabalho2_35
+  - first:
+      213: -1143011856049214907
+    second: samus damage trabalho2_36
+  - first:
+      213: -3870590168031959316
+    second: samus damage trabalho2_37
+  - first:
+      213: -9103428129288316621
+    second: samus damage trabalho2_38
+  - first:
+      213: 2917739951771337278
+    second: samus damage trabalho2_39
+  - first:
+      213: -3175198482583646520
+    second: samus damage trabalho2_40
+  - first:
+      213: 3210167411180290244
+    second: samus damage trabalho2_41
+  - first:
+      213: 3756754568199074747
+    second: samus damage trabalho2_42
+  - first:
+      213: 5419915246499522138
+    second: samus damage trabalho2_43
+  - first:
+      213: 2751679269449626562
+    second: samus damage trabalho2_44
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -45,7 +180,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,7 +232,952 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: samus damage trabalho2_0
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 85
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af49354c7cabd5f40800000000000000
+      internalID: 5718932468985468154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_1
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 86
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d68f1a4cb41aadde0800000000000000
+      internalID: -1307555395004139411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_2
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 85
+        width: 24
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834c49332ceb3ba10800000000000000
+      internalID: 1924091207115654200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_3
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 85
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93084b8d70ee7ad00800000000000000
+      internalID: 984016761071632441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_4
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 30
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388b86996a6e2d580800000000000000
+      internalID: -8803720718343161725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_5
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 30
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f955ab36b67e8e540800000000000000
+      internalID: 5037530631634572703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_6
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 29
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bbcbbbaa7fe1dc20800000000000000
+      internalID: 3229625717947616184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_7
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 28
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268765a50c0e3c670800000000000000
+      internalID: 8557930833688033378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_8
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 692
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86744c5e64dfaf970800000000000000
+      internalID: 8789616103711328104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_9
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 685
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956f70ca5785ad8e0800000000000000
+      internalID: -1667923449566726567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_10
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 689
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4034b4e01115a3b90800000000000000
+      internalID: -7261402315485396220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_11
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 689
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae51755456238510800000000000000
+      internalID: 1550124840398184108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_12
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 689
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602398727fb9dfef0800000000000000
+      internalID: -72730533145529850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_13
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 684
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9149b85fa6c9e19a0800000000000000
+      internalID: -6260394448798378983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_14
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 685
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160b1d5e3b3624500800000000000000
+      internalID: 378974942958563425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_15
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 688
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e682655dcff31a8b0800000000000000
+      internalID: -5142758944336893842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_16
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 693
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355c9df96addc3da0800000000000000
+      internalID: -5963648098829220525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_17
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 691
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d309bfe596ff28d30800000000000000
+      internalID: 4432385811316183101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_18
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 623
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929755744a36f4880800000000000000
+      internalID: -8624565204168640215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_19
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 624
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e34f0d148daea50800000000000000
+      internalID: 6551286385153949196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_20
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 620
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975ea4f28702d3980800000000000000
+      internalID: -8557648016372472455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_21
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 617
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4860fd56a2bd590800000000000000
+      internalID: -7648472925136845642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_22
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 616
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9967a42f73e493f30800000000000000
+      internalID: 4555758500257101465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_23
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 621
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93bdd6ef3f35c07b0800000000000000
+      internalID: -5256734357637440711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_24
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 622
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa8dde2bd24e2a50800000000000000
+      internalID: 6498204821493746422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_25
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 621
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbd53cd791a240d0800000000000000
+      internalID: -3440009491750986793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_26
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 619
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae193e2b562f9f30800000000000000
+      internalID: 4584425118745829031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_27
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 626
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661541d3ecfb4db30800000000000000
+      internalID: 4311281635809317222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_28
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 591
+        width: 25
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3e6574d7957bb30800000000000000
+      internalID: 4303006363578459081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_29
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 340
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c2e619a8348f5b0800000000000000
+      internalID: -5334439496195888105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_30
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 338
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08743b27f2de8bfa0800000000000000
+      internalID: -5784612933313804416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_31
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 338
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b085d170904f710800000000000000
+      internalID: 1726014483351472898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_32
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 329
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6abfd574cbfd50f0800000000000000
+      internalID: -1126467510562997653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_33
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 322
+        width: 43
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e54e858586bfcf0800000000000000
+      internalID: -217465428339565031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_34
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 324
+        width: 43
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b026f581ae8243e0800000000000000
+      internalID: -2070936054248628045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_35
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 321
+        width: 63
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f970d7b3452f370800000000000000
+      internalID: 8354832873203146648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_36
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 314
+        width: 73
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a602ad5c43320f0800000000000000
+      internalID: -1143011856049214907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_37
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 329
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6e55bdfb6e84ac0800000000000000
+      internalID: -3870590168031959316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_38
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 331
+        width: 63
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339987339502aa180800000000000000
+      internalID: -9103428129288316621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_39
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 261
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32cb4cf605ed7820800000000000000
+      internalID: 2917739951771337278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_40
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 260
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce0e329dcd6fe3d0800000000000000
+      internalID: -3175198482583646520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_41
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 260
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0cfe4904ecc8c20800000000000000
+      internalID: 3210167411180290244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_42
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 213
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3f4d9206ca22430800000000000000
+      internalID: 3756754568199074747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_43
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 213
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56e3546338673b40800000000000000
+      internalID: 5419915246499522138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus damage trabalho2_44
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 211
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3f95f67bdef2620800000000000000
+      internalID: 2751679269449626562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

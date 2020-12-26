@@ -6,21 +6,22 @@ public class Ridley : MonoBehaviour
 {
     [HideInInspector] public fogo fire;
     public GameObject fogo;
-    public Transform point;
+
     public float Speed = 1;
     public Transform Target;
     public Transform Target2;
     public bool TEvi = false;
     public float TargetDistance = 5;
-    public Collider2D target1;
+    public Collider2D collider;
     public bool dis = false;
     public float cronometro;
-    private Vector3 posicaoinicial;
+    public float cronometro1;
+    
     public Vector3 direction;
+    [HideInInspector] public AnimationController ac;
 
 
-
-    void Start() { posicaoinicial = Target2.position - transform.position; }
+    void Start() {  ac = GetComponent<AnimationController>() ?? null; }
     void Update()
     {
         if (TEvi != false)
@@ -31,15 +32,17 @@ public class Ridley : MonoBehaviour
             
 
         }
+        cronometro += Time.deltaTime;
+        
     }
 
 
     void hunt()
     {
-        cronometro += Time.deltaTime;
+       
         // Padrão: ir na direção do alvo
         direction = Target.position - transform.position;
-               // direction.y = 0;
+               
                 float distanceToTarget = direction.magnitude;
 
                 direction.Normalize();
@@ -51,15 +54,15 @@ public class Ridley : MonoBehaviour
                     direction = -direction;
             
                   }
-                
-                
-            
         
-        if (distanceToTarget == TargetDistance)
+
+
+
+        if ( distanceToTarget == TargetDistance)
         {
             System.Random r = new System.Random();
             int randomIndex = r.Next(3);
-            atack(randomIndex);
+            atack(1);
         }
         
             
@@ -88,28 +91,30 @@ public class Ridley : MonoBehaviour
     void atack(int randomIndex)
     {
 
-        
 
-        Debug.Log(randomIndex);
-    
-       switch (randomIndex) {
+        cronometro = 0;
+
+
+        switch (randomIndex) {
 
 
          case 1:
-                cronometro = 0;
-                TargetDistance = 0;
+                
+                  TargetDistance = 0;
               Speed = 25;
-            if (cronometro >= 4) volta();
+
+
+                if (cronometro <= 2) { volta(); }
                 break;
 
             case 2:
-                cronometro = 0;
+                ac.PlayAnimation(1);
                 TargetDistance = 5;
                Debug.Log("labareda");
                 GameObject.Find("Labareda").GetComponent<ParticleSystem>().Play();
                 
                
-                if (cronometro >= 6) Debug.Log("labareda fim "); volta(); GameObject.Find("Labareda").GetComponent<ParticleSystem>().Stop();
+                if (cronometro1 >= 3) Debug.Log("labareda fim "); volta(); GameObject.Find("Labareda").GetComponent<ParticleSystem>().Stop();
         
        break;
         }
@@ -118,8 +123,8 @@ public class Ridley : MonoBehaviour
     void volta()
     {
         Debug.Log("quase");
-      
-        Speed = 3; TargetDistance = 10;
+        cronometro = 0;
+        Speed = 3; TargetDistance = 9;
         float voltas = direction.magnitude; 
           direction = -direction;
 
@@ -136,10 +141,11 @@ public class Ridley : MonoBehaviour
 
 
 
+    
 
 
 
-    void OnTriggerEnter2D(Collider2D collider)
+void OnTriggerEnter2D(Collider2D collider)
     {
         // If the player hits the trigger.
         if (collider.gameObject.tag == "Player")
