@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class elevador : MonoBehaviour
 {
-    [HideInInspector] public AnimationController ac;
+    private Animator CAnimation;
     // Start is called before the first frame update
     void Start()
     {
-        ac = GetComponent<AnimationController>() ?? null;
-        ac.PlayAnimation(0);
-
-
+        CAnimation = GetComponent<Animator>();
+        CAnimation.SetBool("decendo", true);
     }
 
+
+
+     void stopelevador()
+    {
+        CAnimation.SetBool("decendo", false);
+
+    }
     // Update is called once per frame
     void Update()
     {

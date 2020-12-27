@@ -6,7 +6,7 @@ public class Ridley : MonoBehaviour
 {
     [HideInInspector] public fogo fire;
     public GameObject fogo;
-
+    private Animator CAnimation;
     public float Speed = 1;
     public Transform Target;
     public Transform Target2;
@@ -18,22 +18,25 @@ public class Ridley : MonoBehaviour
     public float cronometro1;
     
     public Vector3 direction;
-    [HideInInspector] public AnimationController ac;
+    
 
 
-    void Start() {  ac = GetComponent<AnimationController>() ?? null; }
+    void Start() { CAnimation = GetComponent <Animator> (); }
     void Update()
-    {
+    { 
+        
         if (TEvi != false)
         {
 
 
             hunt();
-            
-
+          
+    
+            cronometro += Time.deltaTime;
+        cronometro1 += Time.deltaTime;
         }
-        cronometro += Time.deltaTime;
         
+
     }
 
 
@@ -58,11 +61,12 @@ public class Ridley : MonoBehaviour
 
 
 
-        if ( distanceToTarget == TargetDistance)
+        if ( cronometro1 >= 3)
         {
             System.Random r = new System.Random();
             int randomIndex = r.Next(3);
-            atack(1);
+            atack(randomIndex);
+            Debug.Log(randomIndex);
         }
         
             
@@ -99,32 +103,74 @@ public class Ridley : MonoBehaviour
 
 
          case 1:
-                
-                  TargetDistance = 0;
-              Speed = 25;
+              
+
+                CAnimation.SetBool("investida", true);
 
 
-                if (cronometro <= 2) { volta(); }
                 break;
 
             case 2:
-                ac.PlayAnimation(1);
-                TargetDistance = 5;
-               Debug.Log("labareda");
-                GameObject.Find("Labareda").GetComponent<ParticleSystem>().Play();
                 
+                CAnimation.SetBool("atack1",true);
+              
                
-                if (cronometro1 >= 3) Debug.Log("labareda fim "); volta(); GameObject.Find("Labareda").GetComponent<ParticleSystem>().Stop();
+                
         
        break;
         }
     }           
 
+
+
+
+    private void investida()
+    {
+        TargetDistance = 0;
+        Speed = 45;
+
+    }
+
+    private void Labareda()
+    {
+
+        Speed = 5;
+
+        TargetDistance = 5;
+        Debug.Log("labareda");
+        GameObject.Find("Labareda").GetComponent<ParticleSystem>().Play(true);
+
+
+
+    }
+
+
+
+
+    private void LabaredaStop()
+    {
+        GameObject.Find("Labareda").GetComponent<ParticleSystem>().Stop();
+
+        CAnimation.SetBool("atack1", false);
+            volta();
+            
+    }
+
+    private void InvestidaStop()
+    {
+        GameObject.Find("Labareda").GetComponent<ParticleSystem>().Stop();
+
+        CAnimation.SetBool("investida", false);
+        volta();
+
+    }
+
     void volta()
     {
+        
         Debug.Log("quase");
-        cronometro = 0;
-        Speed = 3; TargetDistance = 9;
+        cronometro1 = 0;
+                Speed = 3; TargetDistance = 9;
         float voltas = direction.magnitude; 
           direction = -direction;
 
@@ -149,7 +195,6 @@ void OnTriggerEnter2D(Collider2D collider)
     {
         // If the player hits the trigger.
         if (collider.gameObject.tag == "Player")
-
         {
 
             TEvi = true;
@@ -158,7 +203,7 @@ void OnTriggerEnter2D(Collider2D collider)
           
         }
 
-        //accelerationSpeed = 0.1f;
+        
 
 
 

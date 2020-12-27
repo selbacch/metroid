@@ -418,10 +418,24 @@ public class PlayerMovement : MonoBehaviour {
             if (forme = !false) { Transfomrme(false); }
             gps.ac.PlayAnimation(35);// animação morph ball}
         }
-       
-        
-        
-        
+
+        if (Input.GetKey(ms.ShoKey) && estado == false && ms.isGrounded == true && s == true)
+        {
+
+
+            gps.ac.PlayAnimation(shotR); // atira para direita
+
+           
+
+        }
+        if (Input.GetKey(ms.ShoKey) && estado != false && ms.isGrounded == true)
+        {
+
+            gps.ac.PlayAnimation(shotL);  // atira para esquerda
+           
+        }
+
+
         Shot();
 
         deth();
@@ -570,8 +584,8 @@ private void FixedUpdate()
     int UshotL = 9;
     int Urshot = 20;
     int ULshot = 21;
-    int Death = 13;
-    int Deathr = 14;
+    int Deathr = 13;
+    int Death = 14;
     int hitR = 11;
     int hitL = 12;
     int jsr = 27;
@@ -628,6 +642,10 @@ private void FixedUpdate()
             
         }
     }
+
+
+
+
    private void damage()
     {
 
@@ -756,7 +774,7 @@ private void FixedUpdate()
             GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
 
         }
-        if (Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == true && u!=false)
+        if (Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == true)
         {
 
             gps.ac.PlayAnimation(shotL);  // atira para esquerda

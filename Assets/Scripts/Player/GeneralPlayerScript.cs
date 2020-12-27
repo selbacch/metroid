@@ -14,6 +14,9 @@ public class GeneralPlayerScript : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>() ?? null;
         pm = GetComponent<PlayerMovement>() ?? null;
         ac = GetComponent<AnimationController>() ?? null;
+    
+    
+    
     }
 
     public void RotatePlayer(float dir)

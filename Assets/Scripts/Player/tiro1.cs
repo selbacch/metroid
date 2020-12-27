@@ -19,26 +19,7 @@ public class tiro1 : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collider2D collider)
-    {
-        // If the player hits the trigger.
-       
-        
-
-
-         
-            Destroy(gameObject);
-
-            // More on game controller shortly.
-            Debug.Log("foi");
-
-
-
-            //accelerationSpeed = 0.1f;
-
-
-        
-    }
+   
 
 
 

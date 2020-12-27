@@ -2,53 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ridley2 : MonoBehaviour
+public class portasceres : MonoBehaviour
 {
-    public Collider2D colisor;
-    public bool TEvi = false;
+
+    private Collider2D Target;
 
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         // If the player hits the trigger.
         if (collider.gameObject.tag == "Player")
-
         {
 
-            TEvi = true;
+            
             // More on game controller shortly.
             Debug.Log("foi");
 
         }
 
-        //accelerationSpeed = 0.1f;
+
 
 
 
     }
+       
+
+
+
 
 
 }
