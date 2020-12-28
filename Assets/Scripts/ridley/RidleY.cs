@@ -16,6 +16,7 @@ public class Ridley : MonoBehaviour
     public bool dis = false;
     public float cronometro;
     public float cronometro1;
+    public int dano;
     
     public Vector3 direction;
     
@@ -128,14 +129,14 @@ public class Ridley : MonoBehaviour
     {
         TargetDistance = 0;
         Speed = 45;
-
+        dano = 7;
     }
 
     private void Labareda()
     {
 
         Speed = 5;
-
+        dano = 5;
         TargetDistance = 5;
         Debug.Log("labareda");
         GameObject.Find("Labareda").GetComponent<ParticleSystem>().Play(true);
@@ -193,13 +194,16 @@ public class Ridley : MonoBehaviour
 
 void OnTriggerEnter2D(Collider2D collider)
     {
-        // If the player hits the trigger.
+
+        
+
+    
         if (collider.gameObject.tag == "Player")
         {
 
             TEvi = true;
-            // More on game controller shortly.
-            Debug.Log("foi");
+          
+           
           
         }
 

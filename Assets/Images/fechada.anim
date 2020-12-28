@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: wall jump
+  m_Name: fechada
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -1890392726148021770, guid: 4e259f003f829fc49a2e9b1069c62f71,
-        type: 3}
-    - time: 0.016666668
-      value: {fileID: -1890392726148021770, guid: 4e259f003f829fc49a2e9b1069c62f71,
+      value: {fileID: 6832350314581645796, guid: 4cb40b2d8ece3004f8c7cee8c74f72e7,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -44,14 +41,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -1890392726148021770, guid: 4e259f003f829fc49a2e9b1069c62f71, type: 3}
-    - {fileID: -1890392726148021770, guid: 4e259f003f829fc49a2e9b1069c62f71, type: 3}
+    - {fileID: 6832350314581645796, guid: 4cb40b2d8ece3004f8c7cee8c74f72e7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.033333335
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -70,18 +66,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0
-    functionName: TocaEfeito5
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.016666668
-    functionName: PararEfeito
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

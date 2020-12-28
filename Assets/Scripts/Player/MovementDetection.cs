@@ -48,7 +48,7 @@ public class MovementDetection : MonoBehaviour {
             gps.pm.CollisionDetection_Enter(collisionType);
 
             //Se a colisão do mapa for inviável, o jogador não será capaz de pular dele.
-            //if (collision.gameObject.layer == 9 && collisionType == CollisionType.Wall) gps.pm.ms.ConsumeAllJumps();
+            //if (collision.gameObject.layer == 9 && collisionType == CollisionType.enemy) GetComponent<Health>(). DamagePlayer();;
 
             //Define CHECKCol como true para evitar cálculos múltiplos desnecessários.
             checkedCol = true;

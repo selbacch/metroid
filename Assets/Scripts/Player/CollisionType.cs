@@ -3,4 +3,5 @@
     Ground,
     Wall,
     Head,
+    enemy,
 }

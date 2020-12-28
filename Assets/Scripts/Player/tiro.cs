@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class tiro : MonoBehaviour
-
+    
 {
     public float speed;
-
+    public Collision2D alvo;
     private float timeDestroy;
     private float range = 20f;
 
@@ -22,4 +22,20 @@ public class tiro : MonoBehaviour
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
+
+
+
+
+   void OnCollisionEnter2D(Collision2D collision)  {
+    GetComponent<toca>().TocaEfeito1();
+        
+        if (gameObject.name == "tiro(Clone)")
+        {
+            timeDestroy = 0f;
+            Destroy(gameObject, timeDestroy);
+           
+        }
+    }
+
+
 }

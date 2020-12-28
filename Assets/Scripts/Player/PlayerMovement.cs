@@ -768,7 +768,7 @@ private void FixedUpdate()
         if (Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == true && s == true)
         {
 
-
+            GetComponent<tocaplayer>().TocaEfeito1();
             gps.ac.PlayAnimation(shotR); // atira para direita
 
             GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
@@ -776,12 +776,13 @@ private void FixedUpdate()
         }
         if (Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == true)
         {
-
+            GetComponent<tocaplayer>().TocaEfeito1();
             gps.ac.PlayAnimation(shotL);  // atira para esquerda
             GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
         }
         if (Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == false)
         {
+            GetComponent<tocaplayer>().TocaEfeito1();
             gps.ac.PlayAnimation(jsr);   // atira para direita no ar
             GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
 
@@ -791,30 +792,17 @@ private void FixedUpdate()
         {
 
 
-            {
-                gps.ac.PlayAnimation(jsl); //atira para esquerda no ar
-                GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
-
-
-            }
-            if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.ShoKey) && ms.isGrounded != false)
-            {
-                GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
-                gps.ac.PlayAnimation(29);
-            }
-            if (Input.GetKey(ms.Upkey) && Input.GetKey(ms.ShoKey) && ms.isGrounded != false && u == true)
-            {
-                GameObject CloneTiro = Instantiate(tiro2, point2.position, point.rotation);
-                
-            }
-
-
-
+            GetComponent<tocaplayer>().TocaEfeito1();
+            gps.ac.PlayAnimation(jsl); //atira para esquerda no ar
+            GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
 
         }
+            
+           
 
+      }
 
-    }
+   
 
 
 
@@ -1008,7 +996,7 @@ private void FixedUpdate()
                     break;
                 case State.wall:
                     //Nota: Você pode cancelar o comentário se não quiser que o jogador salte na parede quando estiver no chão.
-                   // if (!ms.isGrounded) tmp = true;
+                    if (!ms.isGrounded) tmp = true;
                     break;
                 default: tmp = true; break;
             }
