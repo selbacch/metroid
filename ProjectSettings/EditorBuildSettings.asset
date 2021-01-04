@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceColony.unity
     guid: 461f2aed3a361824baf5a6110095f194
+  - enabled: 1
+    path: Assets/Scenes/seresDeath.unity
+    guid: 06a950439a03db6448a1eea1b4128839
+  - enabled: 1
+    path: Assets/Scenes/fugaceres.unity
+    guid: e82a18572a7a9da4fb571731e7815c92
   m_configObjects: {}

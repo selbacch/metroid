@@ -6,9 +6,9 @@ public class portasceres : MonoBehaviour
 {
     public GameObject porta;
     private Animator CAnimation;
-    public Collider2D Target;
+    public Collider2D collider;
     public string trava;
-
+    public bool aciona = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,14 +34,15 @@ public class portasceres : MonoBehaviour
 
 
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerStay2D(Collider2D collider)
     {
         // If the player hits the trigger.
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player" && aciona == false)
         {
 
-            Debug.Log("foi");
+            Debug.Log(aciona);
             CAnimation.SetBool("abre", true);
+           
             
         }
 
@@ -51,12 +52,12 @@ public class portasceres : MonoBehaviour
     void OnTriggerExit2D(Collider2D collider)
     {
         // If the player hits the trigger.
-        if (collider.gameObject.tag != "Player")
+        if (collider.gameObject.tag == "Player" )
         {
 
-            Debug.Log("foi");
+           
             CAnimation.SetBool("abre", false);
-
+           
         }
 
     }

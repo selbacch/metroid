@@ -7,16 +7,17 @@ public class GeneralPlayerScript : MonoBehaviour {
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public PlayerMovement pm;
     [HideInInspector] public AnimationController ac;
-
+    public Animator CAnimation;
 
     // Use isto para inicialização
     void Start () {
         rb = GetComponent<Rigidbody2D>() ?? null;
         pm = GetComponent<PlayerMovement>() ?? null;
         ac = GetComponent<AnimationController>() ?? null;
-    
-    
-    
+        CAnimation = GetComponent<Animator>();
+
+
+
     }
 
     public void RotatePlayer(float dir)

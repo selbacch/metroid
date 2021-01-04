@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Utilities;
 using System.Collections.Generic;
-
+using UnityEngine.SceneManagement;
 //Serialização para que você possa modificar as variáveis ​​no editor
 [System.Serializable]
 public class MovementStats
@@ -147,7 +147,7 @@ public class MovementStats
 
     #region Jump Vars
     //Altura do salto por salto
-    public float jumpHeight = 14;
+    public float jumpHeight = 15;
 
     //Vezes que o jogador pode pular antes / sem bater no chão.
     public int jumpAmount = -40;
@@ -284,6 +284,7 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject tiro7;
     public float fireRate;
     public float nextFire;
+
     [HideInInspector] public GeneralPlayerScript gps;
     [Header("Estatísticas de velocidade de movimento.")]
     public MovementStats ms;
@@ -302,8 +303,10 @@ public class PlayerMovement : MonoBehaviour {
 
         //O estado muda quando: O player está no ar.
         fall,
+
         //o estado muda quando o player morre
         death,
+
         //o estado muda quando o player sofre dano
         hit,
         
@@ -434,14 +437,14 @@ public class PlayerMovement : MonoBehaviour {
             gps.ac.PlayAnimation(shotL);  // atira para esquerda
            
         }
-
+        
 
         Shot();
 
         deth();
         damage();
-        
 
+        plataforma();
 
 
     }
@@ -562,7 +565,10 @@ private void FixedUpdate()
     }
 
     
-
+    void trocacena()
+    {
+        SceneManager.LoadScene("seresDeath");
+    }
 
 
     //animações convertidas em int
@@ -596,12 +602,28 @@ private void FixedUpdate()
     int mptl= 16;
     int srunr = 29;
     int srunl = 30;
+    int bstand = 35;
     //morphball stand 17
     // walk  18
     //walk l 19
 
 
+    public void plataforma()
+    {
+        
+        if (this.transform.Find("hitscan").GetComponent<pop>().animatic != false && ms.isGrounded==true)
+        {
+            
+                gps.ac.PlayAnimation(bstand);
+                gps.CAnimation.SetBool("plataforme", true);
+                
+           
+        }
+        
 
+      
+
+    }
     private void DamageSkin()
     {
 
@@ -650,45 +672,45 @@ private void FixedUpdate()
     {
 
 
-        
+
+       
+
         if (GetComponent<Health>().hit != false)
             {
 
-
-                if (estado == false && ms.isGrounded == true)
+            
+            if (estado == false && ms.isGrounded == true)
                 {
-
-                    gps.ac.PlayAnimation(hitR);
+               
+                gps.ac.PlayAnimation(hitR);
 
                 
                 }
                 if (estado != false && ms.isGrounded == true)
                 {
-                State hitState = State.hit;
+
                 
-                ChangeState(hitState);
                 gps.ac.PlayAnimation(hitL);
                 
                 }
                 if (estado == false && ms.isGrounded != true)
                 {
-                State hitState = State.hit;
 
-                ChangeState(hitState);
+                
                 gps.ac.PlayAnimation(hitR);
 
                 
             }
                 if (estado != false && ms.isGrounded != true)
                 {
-
+                
                     gps.ac.PlayAnimation(hitL);
 
                 }
 
 
                 Debug.Log("foi aqui tbm");
-
+            
             }
         
 
@@ -855,7 +877,7 @@ private void FixedUpdate()
             return;
 
         //0 define o player para um estado ocioso (se possível).
-        if (direction == 0)
+        if (direction == 0 )
         {
             SetPlayerIdle();
             return;
@@ -992,7 +1014,8 @@ private void FixedUpdate()
                     tmp = true;
                     break;
                 case State.hit:
-                    tmp = true;
+                 
+                        tmp = false;
                     break;
                 case State.wall:
                     //Nota: Você pode cancelar o comentário se não quiser que o jogador salte na parede quando estiver no chão.

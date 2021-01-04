@@ -9,6 +9,15 @@ TagManager:
   - Renderizador
   - tiro1
   - Fogo
+  - Plataforma
+  - Ridley
+  - autodestroy
+  - portaboss
+  - alert
+  - destrocos
+  - UIAnimation
+  - UIAnimation1
+  - UIAnimation2
   layers:
   - Default
   - TransparentFX
@@ -46,6 +55,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: background
+  - name: fogo
     uniqueID: 839906327
     locked: 0

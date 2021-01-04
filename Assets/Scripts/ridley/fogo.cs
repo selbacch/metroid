@@ -23,8 +23,8 @@ public bool includeChildren = true;
 
 public void start()
 {
-
-    system.Play(includeChildren);
+        system.gameObject.tag = "Ridley";
+        system.Play(includeChildren);
 
 }
 

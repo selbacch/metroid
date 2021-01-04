@@ -62,4 +62,5 @@ public class CameraManager : ConstantFollowScript {
         float sizeToGive = Utilities.MoveTowards(cam.orthographicSize, cameraSize, resizeSpeed * Time.smoothDeltaTime);
         cam.orthographicSize = sizeToGive;
     }
+
 }

@@ -28,8 +28,7 @@ AudioMixerGroupController:
   m_Name: efeito
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 1c7eebfd9ba6c4441904b0be1952957c
-  m_Children:
-  - {fileID: -7160635977625305518}
+  m_Children: []
   m_Volume: 59c320573ea9d20459130d968859aa0f
   m_Pitch: e0705b528345cc54f9c8ede437e824d0
   m_Send: 00000000000000000000000000000000
@@ -77,6 +76,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: ef0cbb740e6b0bf419312ace07c38b65
   m_Children:
+  - {fileID: -7160635977625305518}
   - {fileID: -5533154080725633614}
   m_Volume: b0b1ab1a3d2043e4c9b51076ccfe1f31
   m_Pitch: b2396e0581f11e94fa507a1da77fe964
@@ -111,9 +111,9 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 08792885f24b91847846915480561cac
   m_FloatValues:
-    3410d546203ff4a4288a9ccf362c3178: -19.422968
-    59c320573ea9d20459130d968859aa0f: -58.54682
-    b0b1ab1a3d2043e4c9b51076ccfe1f31: -11.0000725
+    3410d546203ff4a4288a9ccf362c3178: 1.6660378
+    59c320573ea9d20459130d968859aa0f: 14.9016905
+    b0b1ab1a3d2043e4c9b51076ccfe1f31: -11.000072
   m_TransitionOverrides: {}
 --- !u!244 &3033442727833451599
 AudioMixerEffectController:

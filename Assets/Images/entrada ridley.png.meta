@@ -1,0 +1,356 @@
+fileFormatVersion: 2
+guid: 55462a658b524b243a920d37be6d6021
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8465759387185827373
+    second: entrada ridley_0
+  - first:
+      213: 3119195490440343398
+    second: entrada ridley_1
+  - first:
+      213: 845655920417701852
+    second: entrada ridley_2
+  - first:
+      213: -1279572074767487524
+    second: entrada ridley_3
+  - first:
+      213: -8369895050118261587
+    second: entrada ridley_4
+  - first:
+      213: 4389394951918906861
+    second: entrada ridley_5
+  - first:
+      213: 6451198083955606731
+    second: entrada ridley_6
+  - first:
+      213: 6313688436982588914
+    second: entrada ridley_7
+  - first:
+      213: -3424809911387448380
+    second: entrada ridley_8
+  - first:
+      213: -213200951227315440
+    second: entrada ridley_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 13
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: entrada ridley_0
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 329
+        width: 29
+        height: 67
+      alignment: 9
+      pivot: {x: 0.3494942, y: 1.035722}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d13cdcd0b4938a80800000000000000
+      internalID: -8465759387185827373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: entrada ridley_1
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 329
+        width: 29
+        height: 67
+      alignment: 9
+      pivot: {x: 0.3494942, y: 1.035722}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f62b8b5cb994b20800000000000000
+      internalID: 3119195490440343398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: entrada ridley_2
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 329
+        width: 29
+        height: 67
+      alignment: 9
+      pivot: {x: 0.3494942, y: 1.035722}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdff3b2449f5cbb00800000000000000
+      internalID: 845655920417701852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: entrada ridley_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 174
+        width: 135
+        height: 83
+      alignment: 9
+      pivot: {x: 0.6440746, y: 0.8952414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd69fa3afb0e3ee0800000000000000
+      internalID: -1279572074767487524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: entrada ridley_4
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 176
+        width: 135
+        height: 83
+      alignment: 9
+      pivot: {x: 0.5932249, y: 0.8937047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4966a2cc828db80800000000000000
+      internalID: -8369895050118261587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: entrada ridley_5
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 175
+        width: 135
+        height: 83
+      alignment: 9
+      pivot: {x: 0.6220244, y: 0.86370003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dede408e3734aec30800000000000000
+      internalID: 4389394951918906861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: entrada ridley_6
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 44
+        width: 127
+        height: 85
+      alignment: 9
+      pivot: {x: 0.6418293, y: 0.90658236}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4cad93a72478950800000000000000
+      internalID: 6451198083955606731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: entrada ridley_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 38
+        width: 126
+        height: 89
+      alignment: 9
+      pivot: {x: 0.648156, y: 0.8750359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5a6dc9e2abe9750800000000000000
+      internalID: 6313688436982588914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: entrada ridley_8
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 32
+        width: 126
+        height: 85
+      alignment: 9
+      pivot: {x: 0.6481565, y: 0.8923258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb9380f781a870d0800000000000000
+      internalID: -3424809911387448380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: entrada ridley_9
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 281
+        width: 15
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b025c4dde8a0df0800000000000000
+      internalID: -213200951227315440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

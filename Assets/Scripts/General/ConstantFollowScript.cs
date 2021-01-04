@@ -100,4 +100,10 @@ public class ConstantFollowScript : MonoBehaviour {
         // Passa o vetor de movimento para a transformação do objeto.
         transform.position = movement;
     }
+
+   
+
+
+
+
 }

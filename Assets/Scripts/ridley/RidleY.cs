@@ -9,84 +9,121 @@ public class Ridley : MonoBehaviour
     private Animator CAnimation;
     public float Speed = 1;
     public Transform Target;
-    public Transform Target2;
+    private float timeDestroy;
     public bool TEvi = false;
     public float TargetDistance = 5;
     public Collider2D collider;
     public bool dis = false;
     public float cronometro;
     public float cronometro1;
-    public int dano;
-    
+    public float dano;
+    public bool flip = false;
     public Vector3 direction;
-    
+    public bool hito=false;
 
 
-    void Start() { CAnimation = GetComponent <Animator> (); }
+    void Start() {
+        CAnimation = GetComponent<Animator>();
+
+        
+              this.transform.Find("tail").GetComponent<EdgeCollider2D>().gameObject.SetActive(false); // desativa o colider
+
+        
+
+
+
+
+    }
     void Update()
-    { 
+    {
         
         if (TEvi != false)
         {
-
-
             hunt();
-          
-    
-            cronometro += Time.deltaTime;
-        cronometro1 += Time.deltaTime;
+            
+                cronometro += Time.deltaTime;
+            cronometro1 += Time.deltaTime;
+           
         }
-        
 
     }
+    void portaboss()
+    {
+        
+        GameObject.FindGameObjectWithTag("portaboss").GetComponent<portasceres>().aciona = true;
+    }
+
+
+    public void damageoff()
+    {
+        CAnimation.SetBool("hit", false);
+    }
+ public  void death()
+    {
+       
+
+        cronometro1 = 60f;
+        CAnimation.SetBool("fuga", true);
+        atack(4);
+
+
+
+    }
+   void fuga()
+    {
+        timeDestroy = 0f;
+        Destroy(gameObject, timeDestroy);
+    }
+
+
+
 
 
     void hunt()
     {
-       
-        // Padrão: ir na direção do alvo
-        direction = Target.position - transform.position;
-               
-                float distanceToTarget = direction.magnitude;
-
-                direction.Normalize();
-
-                // Mas se ja estiver perto demais, na verdade quero fugir.
-                // Inverte a direção anterior.
-                if (distanceToTarget < TargetDistance)
-                {
-                    direction = -direction;
-            
-                  }
         
+        this.transform.Find("segura").GetComponent<EdgeCollider2D>().gameObject.SetActive(false); // desativa o colider
+
+        direction = Target.position - transform.position;
+        // direction.y = 0;
+        float distanceToTarget = direction.magnitude;
+
+        direction.Normalize();
 
 
+        if (distanceToTarget < TargetDistance)
+        {
+            direction = -direction;
+        }
+      
+        
+    
 
-        if ( cronometro1 >= 3)
+        if (cronometro1 >= 3)
         {
             System.Random r = new System.Random();
             int randomIndex = r.Next(3);
             atack(randomIndex);
             Debug.Log(randomIndex);
         }
-        
-            
-        
 
-        
+
+
+
+
 
         // Faz o movimento terminar exatamente em cima do alvo
         float distanceWantsToMoveThisFrame = Speed * Time.deltaTime;
-                float actualMovementThisFrame = Mathf.Min(Mathf.Abs(distanceToTarget - TargetDistance), distanceWantsToMoveThisFrame);
+        float actualMovementThisFrame = Mathf.Min(Mathf.Abs(distanceToTarget - TargetDistance), distanceWantsToMoveThisFrame);
 
-                MoveCharacter(actualMovementThisFrame * direction);
-            }
-        
+        MoveCharacter(actualMovementThisFrame * direction);
+    }
 
-        void MoveCharacter(Vector3 frameMovement)
-        {
-            transform.position += frameMovement;
-        }
+
+    void MoveCharacter(Vector3 frameMovement)
+    {
+        transform.position += frameMovement;
+    }
 
 
 
@@ -100,11 +137,12 @@ public class Ridley : MonoBehaviour
         cronometro = 0;
 
 
-        switch (randomIndex) {
+        switch (randomIndex)
+        {
 
 
-         case 1:
-              
+            case 1:
+
 
                 CAnimation.SetBool("investida", true);
 
@@ -112,13 +150,23 @@ public class Ridley : MonoBehaviour
                 break;
 
             case 2:
-                
-                CAnimation.SetBool("atack1",true);
-              
-               
-                
-        
-       break;
+
+                CAnimation.SetBool("atack1", true);
+
+
+
+
+                break;
+
+            case 0:
+                CAnimation.SetBool("tail", true);
+                break;
+
+
+
+            case 4:
+                volta();
+                break;
         }
     }           
 
@@ -129,23 +177,45 @@ public class Ridley : MonoBehaviour
     {
         TargetDistance = 0;
         Speed = 45;
-        dano = 7;
+        dano = 0.2f;
     }
 
     private void Labareda()
     {
 
         Speed = 5;
-        dano = 5;
+        dano = 0.02f;
         TargetDistance = 5;
-        Debug.Log("labareda");
+       
         GameObject.Find("Labareda").GetComponent<ParticleSystem>().Play(true);
 
 
 
     }
 
+    private void tail()
+    {
 
+        Speed = 5;
+        dano = 0.2f;
+        TargetDistance = 5;
+        
+        this.transform.Find("tail").GetComponent<EdgeCollider2D>().gameObject.SetActive(true); // desativa o colider
+
+
+
+    }
+
+
+    private void tailStop()
+    {
+
+        this.transform.Find("tail").GetComponent<EdgeCollider2D>().gameObject.SetActive(false); // desativa o colider
+
+        CAnimation.SetBool("tail", false);
+        volta();
+
+    }
 
 
     private void LabaredaStop()
@@ -169,7 +239,7 @@ public class Ridley : MonoBehaviour
     void volta()
     {
         
-        Debug.Log("quase");
+        
         cronometro1 = 0;
                 Speed = 3; TargetDistance = 9;
         float voltas = direction.magnitude; 
@@ -188,30 +258,35 @@ public class Ridley : MonoBehaviour
 
 
 
-    
 
 
 
-void OnTriggerEnter2D(Collider2D collider)
+
+    void OnTriggerEnter2D(Collider2D collider)
     {
 
-        
 
-    
+
+
         if (collider.gameObject.tag == "Player")
         {
 
-            TEvi = true;
-          
-           
-          
+
+
+            CAnimation.SetBool("entrada", true);
+
         }
 
-        
-
-
-
     }
+        void hunter()
+        {
+            CAnimation.SetBool("entrada", false);
+            TEvi = true;
+
+        }
+
+
+ 
 }
 
    // void OnTriggerExit2D(Collider2D collider)

@@ -5,12 +5,14 @@ using UnityEngine;
 public class tiro1 : MonoBehaviour
 
 {
+    public float dano = 1;
     public float speed;
     public Collider2D collide;
     private float timeDestroy;
     private float range = 20f;
     public Collision2D alvo;
     void Start()
+        
     {
         if (gameObject.name == "tiro1(Clone)")
         {
@@ -38,7 +40,9 @@ public class tiro1 : MonoBehaviour
         {
             timeDestroy = 0f;
             Destroy(gameObject, timeDestroy);
-            
+            timeDestroy = 0f;
+            Destroy(gameObject, timeDestroy);
+
         }
     }
 

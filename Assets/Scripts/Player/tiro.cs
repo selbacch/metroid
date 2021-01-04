@@ -5,6 +5,7 @@ using UnityEngine;
 public class tiro : MonoBehaviour
     
 {
+    public float dano = 1;
     public float speed;
     public Collision2D alvo;
     private float timeDestroy;

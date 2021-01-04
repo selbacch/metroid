@@ -36,30 +36,30 @@ public class tocaplayer : MonoBehaviour
     }
     public void TocaEfeito3()
     {
-        sons.instance.TocarSFX(efeito1);
+        sons.instance.TocarSFX(efeito3);
     }
 
     public void TocaEfeito4()
     {
-        sons.instance.TocarSFX(efeito2);
+        sons.instance.TocarSFX(efeito4);
     }
     public void TocaEfeito5()
     {
-        sons.instance.TocarSFX(efeito1);
+        sons.instance.TocarSFX(efeito5);
     }
 
     public void TocaEfeito6()
     {
-        sons.instance.TocarSFX(efeito2);
+        sons.instance.TocarSFX(efeito6);
     }
     public void TocaEfeito7()
     {
-        sons.instance.TocarSFX(efeito1);
+        sons.instance.TocarSFX(efeito7);
     }
 
     public void TocaEfeito8()
     {
-        sons.instance.TocarSFX(efeito2);
+        sons.instance.TocarSFX(efeito8);
     }
 
     public void PararEfeito()
