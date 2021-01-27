@@ -24,26 +24,26 @@ public class pop: MonoBehaviour
 
 
     // enquanto estiver em colisão com outro (plataforma)
-    void OnTriggerStay2D(Collider2D other)
-    {
+   // void OnTriggerStay2D(Collider2D other)
+    //{
 
-        if (other.tag == "Plataforma")
-        {
-            Debug.Log("ai mulek");
-        GameObject.Find("Player").transform.parent = other.transform;
-            animatic = true;
+     //   if (other.tag == "Plataforma")
+      //  {
+        //    Debug.Log("ai mulek");
+        //GameObject.Find("Player").transform.parent = other.transform;
+         //   animatic = true;
 
-        }
+//        }
 
 
        
-    }
+   // }
      
 
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
+        Debug.Log(other);
         if (other.tag == "Ridley")
         {
 
@@ -59,25 +59,38 @@ public class pop: MonoBehaviour
             
             playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
             Debug.Log(Ridley0);
-            Ridley0 = 0.1f;
+            Ridley0 = 0.3f;
             playerHealth.DamagePlayer(Ridley0);
 
         }
-
-        if (other.tag == "destrocos")
+        if(other.tag == "enemyshot")
         {
-
             playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
             Debug.Log(Ridley0);
-            Ridley0 = 0.1f;
+            Ridley0 = 3f;
             playerHealth.DamagePlayer(Ridley0);
+        }
+
+
+        if (other.tag == "Plataforma1")
+        {
+            Debug.Log("ai mulek");
+            GameObject.Find("Player").transform.parent = other.transform;
+            animatic = true;
 
         }
 
 
 
-    }
+        if (other.tag == "Plataforma")
+        {
+            Debug.Log("ai mulek");
+            GameObject.Find("Player").transform.parent = other.transform;
+            animatic = true;
 
+        }
+       // else { GameObject.Find("Player").transform.parent = GameObject.Find("Fullmap").transform; }
+    }
 
    
     // quando sair da colisão com a plataforma
@@ -89,7 +102,18 @@ public class pop: MonoBehaviour
             GameObject.Find("Player").GetComponent<PlayerMovement>().plataforma();
             GameObject.Find("Player").transform.parent = null;
             animatic = false;
+            GameObject.Find("Player").transform.parent = GameObject.Find("Fullmap").transform;
         }
+
+        if (other.tag == "Plataforma1")
+        {
+            GameObject.Find("Player").GetComponent<PlayerMovement>().plataforma();
+            GameObject.Find("Player").transform.parent = null;
+            animatic = false;
+           
+        }
+
+
     }
 
 

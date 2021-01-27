@@ -20,10 +20,10 @@ public class giramapa : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("autodestroy").GetComponent<autodestruct>().ver != false && roda ==true)
         {
             cronometro += Time.deltaTime;
-            if (cronometro >= 20f) { transform.rotation = Quaternion.Euler(0, 0, 2); }
+            if (cronometro >= 20f) { transform.rotation = Quaternion.Euler(0, 0, 3); }
             if (cronometro >= 10f)
             {
-                transform.rotation = Quaternion.Euler(0, 0, -2);
+                transform.rotation = Quaternion.Euler(0, 0, -3);
             }
             if (cronometro <= 9f) { transform.rotation = Quaternion.Euler(0, 0, 0); }
             if (cronometro >= 21f) {cronometro = 0;

@@ -42,7 +42,7 @@ public class portasceres : MonoBehaviour
 
             Debug.Log(aciona);
             CAnimation.SetBool("abre", true);
-           
+            this.transform.Find("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(false);
             
         }
 

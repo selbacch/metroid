@@ -22,7 +22,7 @@ public class esconde : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("saiu");
-        if (other.tag == "Player")
+        if (other.tag == "playerground")
             CAnimation.SetBool("esconde", false);
     }
 

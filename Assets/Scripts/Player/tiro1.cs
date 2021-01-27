@@ -5,15 +5,17 @@ using UnityEngine;
 public class tiro1 : MonoBehaviour
 
 {
+    private Animator CAnimation;
     public float dano = 1;
     public float speed;
     public Collider2D collide;
     private float timeDestroy;
     private float range = 20f;
-    public Collision2D alvo;
+    public Collision2D collision;
     void Start()
         
     {
+        CAnimation = GetComponent<Animator>();
         if (gameObject.name == "tiro1(Clone)")
         {
             timeDestroy = 5f;
@@ -44,8 +46,22 @@ public class tiro1 : MonoBehaviour
             Destroy(gameObject, timeDestroy);
 
         }
+
+        if (gameObject.name == "missil(Clone)")
+        {
+            CAnimation.SetBool("destroi", true);
+
+
+        }
+
+
     }
 
+    void destroi()
+    {
+        timeDestroy = 0f;
+        Destroy(gameObject, timeDestroy);
+    }
 
 
 }

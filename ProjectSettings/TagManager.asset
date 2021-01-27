@@ -18,6 +18,17 @@ TagManager:
   - UIAnimation
   - UIAnimation1
   - UIAnimation2
+  - button
+  - paracamera
+  - projeta
+  - pointB
+  - pointC
+  - pointD
+  - poinA
+  - Plataforma1
+  - enemyshot
+  - missil
+  - playerground
   layers:
   - Default
   - TransparentFX
@@ -31,7 +42,7 @@ TagManager:
   - ground
   - camera 0
   - camera1
-  - 
+  - tail
   - 
   - 
   - 

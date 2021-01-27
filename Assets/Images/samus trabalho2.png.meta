@@ -437,6 +437,9 @@ TextureImporter:
   - first:
       213: 7378128223971952262
     second: samus trabalho2_143
+  - first:
+      213: 1963740955491084382
+    second: samus trabalho2_144
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -3565,6 +3568,27 @@ TextureImporter:
       bones: []
       spriteID: 686c1295780646660800000000000000
       internalID: 7378128223971952262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samus trabalho2_144
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 251
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58aee2aefb904b10800000000000000
+      internalID: 1963740955491084382
       vertices: []
       indices: 
       edges: []

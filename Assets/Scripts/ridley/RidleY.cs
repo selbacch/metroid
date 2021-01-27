@@ -19,16 +19,16 @@ public class Ridley : MonoBehaviour
     public float dano;
     public bool flip = false;
     public Vector3 direction;
-    public bool hito=false;
-
-
+    public bool hito = false;
+    private SpriteRenderer mySpriteRenderer;
+    public Color Hcolor;
     void Start() {
         CAnimation = GetComponent<Animator>();
 
-        
-              this.transform.Find("tail").GetComponent<EdgeCollider2D>().gameObject.SetActive(false); // desativa o colider
 
-        
+        this.transform.Find("tail").GetComponent<EdgeCollider2D>().gameObject.SetActive(false); // desativa o colider
+
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
 
 
 
@@ -36,23 +36,35 @@ public class Ridley : MonoBehaviour
     }
     void Update()
     {
-        
+
         if (TEvi != false)
         {
             hunt();
-            
-                cronometro += Time.deltaTime;
-            cronometro1 += Time.deltaTime;
-           
-        }
 
+            cronometro += Time.deltaTime;
+            cronometro1 += Time.deltaTime;
+
+        }
+        damage();
     }
     void portaboss()
     {
-        
+
         GameObject.FindGameObjectWithTag("portaboss").GetComponent<portasceres>().aciona = true;
     }
-
+    public void damage()
+    {
+        if (GetComponent<Health>().hit != false)
+        {
+            mySpriteRenderer.color = Hcolor;
+            CAnimation.SetBool("hit", true);
+            Invoke("NormalizaCor", 0.5f); //tempo para voltar a cor normal
+        }
+    }
+    void NormalizaCor()
+    {
+        mySpriteRenderer.color = Color.white;
+    }
 
     public void damageoff()
     {
@@ -177,7 +189,7 @@ public class Ridley : MonoBehaviour
     {
         TargetDistance = 0;
         Speed = 45;
-        dano = 0.2f;
+        dano = 0.5f;
     }
 
     private void Labareda()

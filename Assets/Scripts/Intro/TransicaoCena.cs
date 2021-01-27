@@ -31,7 +31,10 @@ public class TransicaoCena : MonoBehaviour
 
 
 
-
+    void credito()
+    {
+        GameObject.Find("credito").GetComponent<credits>().ativa = true;
+    }
 
 
 

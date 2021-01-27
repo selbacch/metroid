@@ -52,7 +52,10 @@ public class MovementStats
         UrKey = KeyCode.E,
         jumpKey = KeyCode.S,
         ActionKey = KeyCode.W,
-        ShoKey = KeyCode.D;
+        ShoKey = KeyCode.D,
+         Dlkey = KeyCode.A,
+         Drkey = KeyCode.F;
+        
         
     #endregion
 
@@ -229,6 +232,14 @@ public class MovementStats
     [Header("Determina se o jogador pode pular (para uso cinematográfico ou debuffs).")]
     public bool canJump = true;
 
+    [Header("Determina se o jogador ja adquiriu a morphball).")]
+    public bool morphBall = false;
+
+    [Header("Determina se o jogador ja adquiriu os misseis).")]
+    public bool misseis = false;
+    [Header("Determina se o jogador ja adquiriu as bombas).")]
+    public bool bombs = false;
+
     [Header("Determina se o jogador pode pular na parede.")]
     public bool canWallJump = true;
 
@@ -268,22 +279,38 @@ public class MovementStats
 public class PlayerMovement : MonoBehaviour {
     public GameObject tiro;
     public Transform point;
-    public Transform point1;
+    
     public GameObject tiro1;
-    public Transform point2;
-    public GameObject tiro2;
-    public Transform point3;
-    public GameObject tiro3;
-    public Transform point4;
-    public GameObject tiro4;
-    public Transform point5;
-    public GameObject tiro5;
-    public Transform point6;
-    public GameObject tiro6;
-    public Transform point7;
-    public GameObject tiro7;
+  
+    public GameObject tup;
+    
+    public GameObject tdown;
+   
+    public GameObject tur;
+
+
+    public GameObject tul;
+
+
+    public GameObject tdr;
+
+    public string cena;
+    public GameObject tdl;
     public float fireRate;
     public float nextFire;
+    public int mcontm;
+    public int bcontb;
+    public GameObject missil;
+    public GameObject missil1;
+    public GameObject missilup;
+    public GameObject missildw;
+    public GameObject missilur;
+    public GameObject missilul;
+    public GameObject missildr;
+    public GameObject missildl;
+    public int tradGun=0;
+    public int mmax=10;
+    public bool ball;
 
     [HideInInspector] public GeneralPlayerScript gps;
     [Header("Estatísticas de velocidade de movimento.")]
@@ -364,7 +391,14 @@ public class PlayerMovement : MonoBehaviour {
         //Método de chamadas que gerencia o movimento do jogador através da flutuação de direção.
         MovePlayer(direction);
 
-        if (Input.GetKeyDown(ms.jumpKey))
+
+        if (Input.GetKeyDown(ms.ActionKey))
+        {
+            tradGun++;
+        }
+
+
+            if (Input.GetKeyDown(ms.jumpKey))
         {
 
 
@@ -386,72 +420,148 @@ public class PlayerMovement : MonoBehaviour {
         }
         
         if (Input.GetKey(ms.DownKey)) { down(); }
-        if (Input.GetKey(ms.Upkey)) { up();  u = true; }
-        if (Input.GetKeyUp(ms.Upkey)) { up(); u = false; }
+       
+       // if (Input.GetKeyUp(ms.Upkey)) { up(); u = false; }
 
 
-        if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ActionKey)) //transforma em morphball
+        if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ActionKey) && ms.morphBall ==true) //transforma em morphball
+        {
+
+            Transfomrme(true);
+            ball = true;
+            if (forme = !false) { Transfomrme(false); ball = false; }
+            gps.ac.PlayAnimation(mptr);// animação morph ball}
+        }
+
+        if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.DownKey) && Input.GetKeyDown(ms.ActionKey) && ms.morphBall == true) //volta ao normal
         {
 
             Transfomrme(true);
             
-            if (forme = !false) { Transfomrme(false); }
-            gps.ac.PlayAnimation(mptr);// animação morph ball}
-        }
-
-        if (Input.GetKey(ms.rightKey) && Input.GetKey(ms.DownKey) && Input.GetKeyDown(ms.ActionKey)) //volta ao normal
-        {
-
-            Transfomrme(true);
             gps.ac.PlayAnimation(23);// animação morph ball
 
         }
-        if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.DownKey) && Input.GetKeyDown(ms.ActionKey)) //transforma em morphball
+        if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.DownKey) && Input.GetKeyDown(ms.ActionKey) && ms.morphBall == true) //transforma em morphball
         {
 
             Transfomrme(true);
+            
             gps.ac.PlayAnimation(mptl);// animação morph ball
 
         }
-        if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ActionKey)) //transforma em morphball
+        if (Input.GetKey(ms.leftKey) && Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ActionKey) && ms.morphBall == true) //transforma em morphball
         {
 
             Transfomrme(true);
 
-            if (forme = !false) { Transfomrme(false); }
+            if (forme = !false) { Transfomrme(false); ball = false; }
             gps.ac.PlayAnimation(35);// animação morph ball}
         }
 
-        if (Input.GetKey(ms.ShoKey) && estado == false && ms.isGrounded == true && s == true)
+        if (Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == true)
         {
 
+            gps.CAnimation.SetBool("shotr", true);
+            //  gps.ac.PlayAnimation(shotL); // atira para direita
 
-            gps.ac.PlayAnimation(shotR); // atira para direita
 
-           
+
 
         }
-        if (Input.GetKey(ms.ShoKey) && estado != false && ms.isGrounded == true)
-        {
+        else { gps.CAnimation.SetBool("shotr", false); }
 
-            gps.ac.PlayAnimation(shotL);  // atira para esquerda
-           
-        }
         
+        if (Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == true)
+        {
+            
+            gps.CAnimation.SetBool("shotl", true);
+            // gps.ac.PlayAnimation(shotR);  // atira para esquerda
 
-        Shot();
+        }
+        else { gps.CAnimation.SetBool("shotl", false); }
+     
+            if (Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == false)
+        {
+            gps.CAnimation.SetBool("jshotl", true);
+
+        }
+        else { gps.CAnimation.SetBool("jshotl", false); }
+        if (Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == false)
+        {
+            
+            gps.CAnimation.SetBool("jshotr", true);
+
+        }
+        else { gps.CAnimation.SetBool("jshotr", false); }
+
+
+        if (Input.GetKey(ms.DownKey) && Input.GetKeyDown(ms.ShoKey) && ms.isGrounded == false)
+        {
+            
+            gps.CAnimation.SetBool("dshot", true);
+            gps.CAnimation.SetBool("jshotr", false);
+            gps.CAnimation.SetBool("jshotl", false);
+
+
+        }
+        else { gps.CAnimation.SetBool("dshot", false); }
+        if ((Input.GetKey(ms.UrKey) && Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == true))
+        {
+            gps.CAnimation.SetBool("ushotr", true);
+            gps.CAnimation.SetBool("shotr", false);
+
+        }
+        else { gps.CAnimation.SetBool("ushotr", false); }
+
+        if ((Input.GetKey(ms.UlKey) && Input.GetKeyDown(ms.ShoKey) && ms.isGrounded == true))
+        {
+
+            gps.CAnimation.SetBool("ushotl", true);
+            gps.CAnimation.SetBool("shotl", false);
+
+        }
+        else { gps.CAnimation.SetBool("ushotl", false); }
+
+
+        if ((Input.GetKey(ms.Drkey) && Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == true))
+        {
+            gps.CAnimation.SetBool("dshotr", true);
+            gps.CAnimation.SetBool("shotr", false);
+
+        }
+        else { gps.CAnimation.SetBool("dshotr", false); }
+        if ((Input.GetKey(ms.Dlkey) && Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == true))
+        {
+
+            gps.CAnimation.SetBool("dshotl", true);
+            gps.CAnimation.SetBool("shotl", false);
+        }
+        else { gps.CAnimation.SetBool("dshotl", false); }
+
+      
+        if (Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ShoKey)) {
+           
+           
+            gps.CAnimation.SetBool("ushot", true);
+            gps.CAnimation.SetBool("shotr", false);
+            gps.CAnimation.SetBool("shotl", false);
+        }
+        else { gps.CAnimation.SetBool("ushot", false); }
+        //Shot();
 
         deth();
         damage();
 
         plataforma();
-
-
+        if(mcontm > mmax) { mcontm = mmax; }
+        if (bcontb > mmax) { bcontb = mmax; }
+        if (tradGun > 2) { tradGun = 0; }
+        if (ms.misseis == false) { tradGun = 0; }
     }
 public bool resp = true;
 private void FixedUpdate()
     {
-        DamageSkin();
+        //DamageSkin();
        
         //Define o Vector2 CurrentVelocity que gerencia a velocidade do corpo.
         ms.CurrentVelocity = new Vector2(ms.CurrentVelocity.x, ms.CurrentVelocity.y);
@@ -567,7 +677,7 @@ private void FixedUpdate()
     
     void trocacena()
     {
-        SceneManager.LoadScene("seresDeath");
+        SceneManager.LoadScene(cena);
     }
 
 
@@ -610,26 +720,43 @@ private void FixedUpdate()
 
     public void plataforma()
     {
-        
-        if (this.transform.Find("hitscan").GetComponent<pop>().animatic != false && ms.isGrounded==true)
-        {
-            
-                gps.ac.PlayAnimation(bstand);
-                gps.CAnimation.SetBool("plataforme", true);
-                
-           
-        }
-        
 
-      
+        if (this.transform.Find("hitscan").GetComponent<pop>().animatic == true && ms.isGrounded == true)
+        {
+
+            gps.ac.PlayAnimation(bstand);
+
+
+
+
+
+        }
+
 
     }
+         void shotout()
+        {
+            gps.CAnimation.SetBool("shotr", false);
+        gps.CAnimation.SetBool("shotl", false);
+        gps.CAnimation.SetBool("jshotl", false);
+        gps.CAnimation.SetBool("jshotr", false);
+        gps.CAnimation.SetBool("rshotr", false);
+        gps.CAnimation.SetBool("rshotl", false);
+        gps.CAnimation.SetBool("dshot", false);
+        gps.CAnimation.SetBool("ushot", false);
+        gps.CAnimation.SetBool("dshotr", false);
+        gps.CAnimation.SetBool("dshotl", false);
+        gps.CAnimation.SetBool("ushotr", false);
+        gps.CAnimation.SetBool("ushotl", false);
+    }
+
+    
     private void DamageSkin()
     {
 
        if(GetComponent<Health>().curHealth <= 15)
         {
-            Debug.Log("skin de dano");
+            
             standR = 31;
             standL = 32;
             moveR = 33;
@@ -709,7 +836,7 @@ private void FixedUpdate()
                 }
 
 
-                Debug.Log("foi aqui tbm");
+              
             
             }
         
@@ -733,7 +860,7 @@ private void FixedUpdate()
              JumpL = 19;
              WjumpR = 18;
              WjumpL = 19;
-             
+            ball = true;
              WjAfterR = 15;
              WjAfterL = 19;
              shotR = 18;
@@ -745,7 +872,7 @@ private void FixedUpdate()
 
             this.transform.Find("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(false); // desativa o colider
             this.transform.Find("MainCollider").GetComponent<CircleCollider2D>().gameObject.SetActive(false); // desativa o colider
-
+            
                    }
 
         if (forme != true)
@@ -770,7 +897,8 @@ private void FixedUpdate()
             Deathr = 14;
             hitR = 11;
             hitL = 12;
-
+            ms.isGrounded = true;
+            ball = false;
             downr = 22;
             downl = 23;
              this.transform.Find("HeadCollider").GetComponent<BoxCollider2D>().gameObject.SetActive(true); // ativa o colider
@@ -780,60 +908,184 @@ private void FixedUpdate()
 
 
     bool s = true;
-    void Shot()
+
+
+
+
+    public void municao(int valor)
+    {
+        if (ms.misseis == true)
+        {
+           mcontm = mcontm  + valor; 
+                  
+                    }
+
+
+    }
+    public void municao1(int valor)
+    {
+        if (ms.bombs == true)
+        {
+            bcontb = bcontb + valor;
+
+        }
+
+
+    }
+
+    void ShotR()
     {
 
 
+          
+  
 
 
-
-        if (Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == true && s == true)
+        if (tradGun == 0 && ball==false)
         {
 
             GetComponent<tocaplayer>().TocaEfeito1();
-            gps.ac.PlayAnimation(shotR); // atira para direita
+
 
             GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
-
         }
-        if (Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == true)
+
+        if (tradGun == 1 && mcontm >0 && ball == false) { GameObject CloneTiro = Instantiate(missil, point.position, point.rotation); mcontm--; }
+    }
+    void ShotL()
+    {
+        if (tradGun == 0 && ball == false) { 
+        GetComponent<tocaplayer>().TocaEfeito1();
+
+        GameObject CloneTiro = Instantiate(tiro1, point.position, point.rotation);
+    }
+    if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro = Instantiate(missil1, point.position, point.rotation); }
+
+    }
+    
+
+
+    void uhot()
+    {
+
+        if (tradGun == 0 && ball == false)
         {
             GetComponent<tocaplayer>().TocaEfeito1();
-            gps.ac.PlayAnimation(shotL);  // atira para esquerda
-            GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
         }
-        if (Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == false)
+
+        GameObject CloneTiro = Instantiate(tup, point.position, point.rotation);
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro1= Instantiate(missilup, point.position, point.rotation); }
+    }
+
+
+
+
+
+    void dhotL()
+    {
+
+        if (tradGun == 0 && ball == false)
         {
             GetComponent<tocaplayer>().TocaEfeito1();
-            gps.ac.PlayAnimation(jsr);   // atira para direita no ar
-            GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
 
 
+            GameObject CloneTiro = Instantiate(tdown, point.position, point.rotation);
         }
-        if (Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == false)
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro2= Instantiate(missildw, point.position, point.rotation); }
+
+    }
+
+
+    void dlshot()
+    {
+
+        if (tradGun == 0 && ball == false)
         {
-
-
             GetComponent<tocaplayer>().TocaEfeito1();
-            gps.ac.PlayAnimation(jsl); //atira para esquerda no ar
-            GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
 
+
+            GameObject CloneTiro = Instantiate(tdl, point.position, point.rotation);
         }
-            
-           
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro3= Instantiate(missildl, point.position, point.rotation); }
 
-      }
+    }
 
-   
+    void urshot()
+    {
+
+        if (tradGun == 0 && ball == false)
+        {
+            GetComponent<tocaplayer>().TocaEfeito1();
+
+
+            GameObject CloneTiro = Instantiate(tur, point.position, point.rotation);
+        }
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro4= Instantiate(missilur, point.position, point.rotation); }
+
+    }
+
+    void ulshot()
+    {
+
+        if (tradGun == 0 && ball == false)
+        {
+            GetComponent<tocaplayer>().TocaEfeito1();
+
+
+            GameObject CloneTiro = Instantiate(tul, point.position, point.rotation);
+        }
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro5= Instantiate(missilul, point.position, point.rotation); }
+
+    }
+    void drshot()
+    {
+
+        if (tradGun == 0 && ball == false)
+        {
+            GetComponent<tocaplayer>().TocaEfeito1();
+
+
+            GameObject CloneTiro = Instantiate(tdr, point.position, point.rotation);
+        }
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro6= Instantiate(missildr, point.position, point.rotation); }
+
+    }
 
 
 
-      
+
+    //if (Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == false)
+    //{
+    //  GetComponent<tocaplayer>().TocaEfeito1();
+    // gps.ac.PlayAnimation(jsr);   // atira para direita no ar
+    //GameObject CloneTiro = Instantiate(tiro, point.position, point.rotation);
+
+
+    //        }
+    //      if (Input.GetKeyDown(ms.ShoKey) && estado != false && ms.isGrounded == false)
+    //    {
+
+
+    //      GetComponent<tocaplayer>().TocaEfeito1();
+    //    gps.ac.PlayAnimation(jsl); //atira para esquerda no ar
+    //  GameObject CloneTiro = Instantiate(tiro1, point1.position, point.rotation);
+
+    //}
+
+
+
+    //}
+
+
+
+
+
+
 
     /// <summary>
     /// Método que faz o jogador pular do chão.
     /// </summary>
-        private void GroundJump()
+    private void GroundJump()
     {
         if (ms.isGrounded != false)// realiza o salto somente se ele estiver encostando no chão 
         {
@@ -954,13 +1206,14 @@ private void FixedUpdate()
 
             if (estado == false)
             {
-                gps.ac.PlayAnimation(17);
+                gps.ac.PlayAnimation(downr);
+
                 //if (tmp1 == -1) if (state == moveState) gps.ac.PlayAnimation(10);
             }
             if (estado != false)
             {
                 //Debug.Log("agaixou");
-                gps.ac.PlayAnimation(18);
+                gps.ac.PlayAnimation(downl);
             }
 
         }

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class portas : MonoBehaviour
 {
-    [HideInInspector] public AnimationController ac;
-    public Animator anim;
-    public Collider2D collider;
+    private Animator CAnimation;
+    public bool ver = false;
+    public GameObject trava;
+    public GameObject joga;
+    // Start is called before the first frame update
     void Start()
     {
-
+        CAnimation = GetComponent<Animator>();
     }
 
 
@@ -18,56 +20,50 @@ public class portas : MonoBehaviour
 
 
 
-
-    void Update()
-    {
-
-
-
-
-
-
-
-        void OnTriguedEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
         {
             // If the player hits the trigger.
             if (collider.gameObject.tag == "tiro1")
             {
-                ac.PlayAnimation(1);
+            CAnimation.SetBool("abre", true);
 
 
 
-                // More on game controller shortly.
-                Debug.Log("foi");
+            // More on game controller shortly.
+            
 
+            trava.SetActive(false);
+            CAnimation.SetBool("fecha", false);
 
+            //accelerationSpeed = 0.1f;
+            
 
-                //accelerationSpeed = 0.1f;
-
-
-            }
         }
-    }
+        }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        // If the player hits the trigger.
+        if (collider.gameObject.tag == "Player")
+        {
+            CAnimation.SetBool("fecha", true);
+            CAnimation.SetBool("abre", false);
+
+           
+            // More on game controller shortly.
 
 
-    //void OnCollisionExit2D(Collider2D collider)
-  //  {
-      //  // If the player hits the trigger.
-        //if (collider.gameObject.tag == "tiro1")
-
-
-//        {
-
-  //          ac.PlayAnimation(2);
-          
-    //        // More on game controller shortly.
-      //8      Debug.Log("foi");
-            //this.transform.Find("Ridley").GetComponent<toca>().PararEfeito();
+            trava.SetActive(true);
 
 
             //accelerationSpeed = 0.1f;
 
 
-//        }
-  //  }
+        }
+    }
+
+
 }
+
+
+ 

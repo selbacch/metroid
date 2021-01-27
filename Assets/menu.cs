@@ -10,6 +10,8 @@ using System.Linq;
 using System;
 public class menu : MonoBehaviour
 {
+    private float mVOLUME;
+    private float eVOLUME;
     public Slider musicaVolume;
     public Slider efeitoVolume;
     public KeyCode inicia = KeyCode.KeypadEnter;
@@ -45,7 +47,21 @@ public class menu : MonoBehaviour
         Opcoes(false);
         Opcoes2(false);
         Opcoes3(false);
+        musicaVolume.minValue = 0;
+        musicaVolume.maxValue = 1;
 
+        //=============== SAVES===========//
+        if (PlayerPrefs.HasKey("mVOLUME"))
+        {
+            mVOLUME = PlayerPrefs.GetFloat("mVOLUME");
+            musicaVolume.value = mVOLUME;
+            AudioListener.volume = mVOLUME;
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("mVOLUME", 1);
+            musicaVolume.value = 1;
+        }
 
     }
 

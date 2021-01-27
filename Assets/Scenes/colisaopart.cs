@@ -16,7 +16,7 @@ public class colisaopart : MonoBehaviour
             
             Ridley0 = GameObject.FindGameObjectWithTag("Ridley").GetComponent<Ridley>().dano;
             playerHealth.DamagePlayer(Ridley0);
-            Debug.Log(Ridley0);
+           
         }
 
     }

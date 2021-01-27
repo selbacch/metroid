@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/fugaceres.unity
     guid: e82a18572a7a9da4fb571731e7815c92
+  - enabled: 1
+    path: Assets/Scenes/gotozebes.unity
+    guid: a9fa83611dafcde46838589687fd32bb
+  - enabled: 1
+    path: Assets/Scenes/Zebes.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

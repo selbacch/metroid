@@ -5,21 +5,60 @@ using UnityEngine;
 public class tirodownr : MonoBehaviour
 {
     public float speed;
-
+    private Animator CAnimation;
     private float timeDestroy;
     private float range = 20f;
-
+    public Collision2D collision;
     void Start()
     {
-        if (gameObject.name == "tiro(Clone)")
+        CAnimation = GetComponent<Animator>();
+        CAnimation.SetBool("dr", true);
+       
+    }
+
+    void Update()
+    { if (gameObject.name == "tirodownr(Clone)")
         {
             timeDestroy = 5f;
             Destroy(gameObject, timeDestroy);
         }
+        if (gameObject.name == "missildr(Clone)")
+        {
+            timeDestroy = 5f;
+            Destroy(gameObject, timeDestroy);
+        }
+        Vector2 diagonal;
+        diagonal.x = 1;
+        diagonal.y = -1f;
+
+        transform.Translate(diagonal * speed * Time.deltaTime);
     }
 
-    void Update()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        //transform.Translate((Vector2.x + Vector2.y * -1) * speed * Time.deltaTime);
+        GetComponent<toca>().TocaEfeito1();
+
+        if (gameObject.name == "tirodownr(Clone)")
+        {
+            timeDestroy = 0f;
+            Destroy(gameObject, timeDestroy);
+            timeDestroy = 0f;
+            Destroy(gameObject, timeDestroy);
+
+        }
+       if(gameObject.name == "missildr(Clone)")
+        {
+            CAnimation.SetBool("destroi", true);
+
+
+        }
+
+
+    }
+
+    void destroi()
+    {
+        timeDestroy = 0f;
+        Destroy(gameObject, timeDestroy);
     }
 }

@@ -86,6 +86,9 @@ TextureImporter:
   - first:
       213: 530018212384571649
     second: ridley_18
+  - first:
+      213: -8518057909277751854
+    second: ridley_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -724,6 +727,48 @@ TextureImporter:
       bones: []
       spriteID: 1018ba981c00b5700800000000000000
       internalID: 530018212384571649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ridley_19
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 271
+        width: 118
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83642b05a0ae4acb0800000000000000
+      internalID: -4853497168374118856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ridley_27
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 272
+        width: 130
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d50b4d4677c9c980800000000000000
+      internalID: -8518057909277751854
       vertices: []
       indices: 
       edges: []

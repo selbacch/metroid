@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: 8c43946ca5ae51549977f13752811c3e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5038530311798580327
+    second: torizo_0
+  - first:
+      213: 4649903910763473954
+    second: torizo_1
+  - first:
+      213: 6118638785676967633
+    second: torizo_2
+  - first:
+      213: -1187358069680015064
+    second: torizo_3
+  - first:
+      213: -8583723963753503794
+    second: torizo_4
+  - first:
+      213: -8187645649104755633
+    second: torizo_5
+  - first:
+      213: 7471064365387758365
+    second: torizo_6
+  - first:
+      213: 3645571651288637283
+    second: torizo_7
+  - first:
+      213: -4085053016128410178
+    second: torizo_8
+  - first:
+      213: 252485793267609389
+    second: torizo_9
+  - first:
+      213: -6542116021103302742
+    second: torizo_10
+  - first:
+      213: -8074719027191514942
+    second: torizo_11
+  - first:
+      213: -3447457380846394979
+    second: torizo_12
+  - first:
+      213: 4613621840389945681
+    second: torizo_13
+  - first:
+      213: -586880218303875822
+    second: torizo_14
+  - first:
+      213: -7659906019774258085
+    second: torizo_15
+  - first:
+      213: -1692768603398424432
+    second: torizo_16
+  - first:
+      213: 3373956747845462385
+    second: torizo_17
+  - first:
+      213: -4747794375327930931
+    second: torizo_18
+  - first:
+      213: -7448313359382060797
+    second: torizo_19
+  - first:
+      213: -2735777496153869847
+    second: torizo_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -45,7 +108,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 13
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,7 +160,448 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: torizo_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1202
+        width: 45
+        height: 83
+      alignment: 9
+      pivot: {x: 0.5190426, y: 0.59044087}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764eac09f947ce540800000000000000
+      internalID: 5038530311798580327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1199
+        width: 44
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ca1c878f6c78040800000000000000
+      internalID: 4649903910763473954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1198
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1def331ce85c9e450800000000000000
+      internalID: 6118638785676967633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 1100
+        width: 73
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82977836028a58fe0800000000000000
+      internalID: -1187358069680015064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1100
+        width: 57
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3e672988c70e880800000000000000
+      internalID: -8583723963753503794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_5
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 998
+        width: 47
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44a65289a3af5e80800000000000000
+      internalID: -8187645649104755633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 999
+        width: 71
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b3409f47d8ea760800000000000000
+      internalID: 7471064365387758365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_7
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 900
+        width: 69
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f1b4e0a1ca79230800000000000000
+      internalID: 3645571651288637283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 899
+        width: 75
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd2705ece9fe47c0800000000000000
+      internalID: -4085053016128410178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_9
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 801
+        width: 71
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f6c82cd72018300800000000000000
+      internalID: 252485793267609389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_10
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 801
+        width: 55
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7eeb2f32cb535a0800000000000000
+      internalID: -6542116021103302742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_11
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 700
+        width: 46
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8792393d5d0ff80800000000000000
+      internalID: -8074719027191514942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 700
+        width: 57
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d912a5c07cb2820d0800000000000000
+      internalID: -3447457380846394979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_13
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 598
+        width: 67
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1593d6cae90e60040800000000000000
+      internalID: 4613621840389945681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 598
+        width: 67
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2153b460d8bfad7f0800000000000000
+      internalID: -586880218303875822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 499
+        width: 82
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54aa761f0c82b590800000000000000
+      internalID: -7659906019774258085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 299
+        width: 83
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098b0838ce31288e0800000000000000
+      internalID: -1692768603398424432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_17
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 200
+        width: 91
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1796cd249c3b2de20800000000000000
+      internalID: 3373956747845462385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 199
+        width: 77
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc52bf7ab227c1eb0800000000000000
+      internalID: -4747794375327930931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_19
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 99
+        width: 71
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3016c36667642a890800000000000000
+      internalID: -7448313359382060797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torizo_20
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 100
+        width: 70
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1bd3dacd0980ad0800000000000000
+      internalID: -2735777496153869847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

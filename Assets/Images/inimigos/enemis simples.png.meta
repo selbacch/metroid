@@ -1,7 +1,67 @@
 fileFormatVersion: 2
 guid: 2b531de6a507ae44db58799c2388f384
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2119951298842132157
+    second: enemis simples_0
+  - first:
+      213: 2163233733652277359
+    second: enemis simples_1
+  - first:
+      213: 5267976151581441085
+    second: enemis simples_2
+  - first:
+      213: 3063372943761149668
+    second: enemis simples_3
+  - first:
+      213: 8930436828930607966
+    second: enemis simples_4
+  - first:
+      213: -7531776086240700005
+    second: enemis simples_5
+  - first:
+      213: -4983658287054724454
+    second: enemis simples_6
+  - first:
+      213: -6299426047022169172
+    second: enemis simples_7
+  - first:
+      213: -6756653058004568443
+    second: enemis simples_8
+  - first:
+      213: -1790296983392710372
+    second: enemis simples_9
+  - first:
+      213: -5795505033485252921
+    second: enemis simples_10
+  - first:
+      213: -7445025019858483706
+    second: enemis simples_11
+  - first:
+      213: -4410336379356406638
+    second: enemis simples_12
+  - first:
+      213: -5046938031981318477
+    second: enemis simples_13
+  - first:
+      213: -8588050835561486612
+    second: enemis simples_14
+  - first:
+      213: 8603648233744680474
+    second: enemis simples_15
+  - first:
+      213: 3605175900628782983
+    second: enemis simples_16
+  - first:
+      213: -8250150139295430896
+    second: enemis simples_17
+  - first:
+      213: 7776486181965752500
+    second: enemis simples_18
+  - first:
+      213: -175425571987733874
+    second: enemis simples_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -45,7 +105,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,7 +157,427 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: enemis simples_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 384
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3410363968b6492e0800000000000000
+      internalID: -2119951298842132157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 720
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f686c749e99550e10800000000000000
+      internalID: 2163233733652277359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 721
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cbd30266c9b1940800000000000000
+      internalID: 5267976151581441085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 720
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee0d6f3679438a20800000000000000
+      internalID: 3063372943761149668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_4
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 720
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b897dfaf84feb70800000000000000
+      internalID: 8930436828930607966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_5
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 721
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9957dbfd81c97790800000000000000
+      internalID: -7531776086240700005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_6
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 720
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92eb26413d76dab0800000000000000
+      internalID: -4983658287054724454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_7
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 385
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca38662d261f398a0800000000000000
+      internalID: -6299426047022169172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_8
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 384
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586b41f87db8b32a0800000000000000
+      internalID: -6756653058004568443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 384
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c119c6601669727e0800000000000000
+      internalID: -1790296983392710372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_10
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 384
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c68f11c0ea329fa0800000000000000
+      internalID: -5795505033485252921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_11
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 388
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606807b9035fda890800000000000000
+      internalID: -7445025019858483706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_12
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 384
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c9a701e665bc2c0800000000000000
+      internalID: -4410336379356406638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_13
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 386
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be2858899ca5f9b0800000000000000
+      internalID: -5046938031981318477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 417
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce66c59344d11d880800000000000000
+      internalID: -8588050835561486612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_15
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 418
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16c4c80c7c466770800000000000000
+      internalID: 8603648233744680474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_16
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 419
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f07cd6168280230800000000000000
+      internalID: 3605175900628782983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_17
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 417
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01708a3d824918d80800000000000000
+      internalID: -8250150139295430896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_18
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 418
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b86dcc1bf0abeb60800000000000000
+      internalID: 7776486181965752500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemis simples_19
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 420
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82c6292f53c09df0800000000000000
+      internalID: -175425571987733874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -19,6 +19,19 @@ public class hitenemi : MonoBehaviour
             enemy.DamagePlayer(tiro);
 
         }
-     void hitoff(){ hit = false; }
+        if (other.tag == "missil")
+        {
+            hit = true;
+            enemy = GameObject.FindGameObjectWithTag("Ridley").GetComponent<Health>();
+
+            tiro = GameObject.FindGameObjectWithTag("Ridley").GetComponent<Ridley>().dano;
+            enemy.DamagePlayer(tiro);
+
+        }
+
+
+
+
+        void hitoff(){ hit = false; }
     }
 }

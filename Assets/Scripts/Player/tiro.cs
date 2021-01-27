@@ -10,10 +10,17 @@ public class tiro : MonoBehaviour
     public Collision2D alvo;
     private float timeDestroy;
     private float range = 20f;
-
+    private Animator CAnimation;
     void Start()
     {
-        if (gameObject.name =="tiro(Clone)") {
+        CAnimation = GetComponent<Animator>();
+        if (gameObject.name == "missil(Clone)") {
+            timeDestroy = 5f;
+            Destroy(gameObject, timeDestroy);
+        }
+        CAnimation = GetComponent<Animator>();
+        if (gameObject.name == "tiro(Clone)")
+        {
             timeDestroy = 5f;
             Destroy(gameObject, timeDestroy);
         }
@@ -28,15 +35,25 @@ public class tiro : MonoBehaviour
 
 
    void OnCollisionEnter2D(Collision2D collision)  {
-    GetComponent<toca>().TocaEfeito1();
+    
         
-        if (gameObject.name == "tiro(Clone)")
+        if (gameObject.name == "missil(Clone)")
         {
-            timeDestroy = 0f;
-            Destroy(gameObject, timeDestroy);
+            CAnimation.SetBool("destroi", true);
+            
            
         }
+        if (gameObject.name == "tiro(Clone)")
+        {
+            GetComponent<toca>().TocaEfeito1();
+            timeDestroy = 0f;
+            Destroy(gameObject, timeDestroy);
+        }
     }
-
+    void destroi()
+    {
+        timeDestroy = 0f;
+        Destroy(gameObject, timeDestroy);
+    }
 
 }
