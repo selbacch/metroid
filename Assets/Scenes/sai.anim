@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: upl
+  m_Name: sai
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 8817272015152700487, guid: 4e259f003f829fc49a2e9b1069c62f71,
-        type: 3}
-    - time: 0.016666668
-      value: {fileID: 8817272015152700487, guid: 4e259f003f829fc49a2e9b1069c62f71,
+      value: {fileID: -7829562021784112499, guid: d9df7d66960f5234ea890df747ee065e,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -44,14 +41,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 8817272015152700487, guid: 4e259f003f829fc49a2e9b1069c62f71, type: 3}
-    - {fileID: 8817272015152700487, guid: 4e259f003f829fc49a2e9b1069c62f71, type: 3}
+    - {fileID: -7829562021784112499, guid: d9df7d66960f5234ea890df747ee065e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.033333335
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -72,14 +68,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: uhot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.016666668
-    functionName: shotout
+    functionName: tailStop
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

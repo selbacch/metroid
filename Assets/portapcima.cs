@@ -44,6 +44,7 @@ public class portapcima : MonoBehaviour
     
     void OnTriggerExit2D(Collider2D collider)
     {
+       
         // If the player hits the trigger.
         if (collider.gameObject.tag == "Player")
         {
@@ -52,8 +53,8 @@ public class portapcima : MonoBehaviour
 
 
             // More on game controller shortly.
-           
 
+            
             this.transform.Find(trava).GetComponent<BoxCollider2D>().gameObject.SetActive(true);
        joga.SetActive(false);
 

@@ -55,7 +55,7 @@ public class redpotal : MonoBehaviour
             CAnimation.SetBool("fecha", true);
             CAnimation.SetBool("abre", false);
 
-
+            ver = 2;
             // More on game controller shortly.
             Debug.Log("saindo");
 

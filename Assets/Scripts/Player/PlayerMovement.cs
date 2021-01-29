@@ -504,6 +504,25 @@ public class PlayerMovement : MonoBehaviour {
 
 
         }
+        if (Input.GetKey(ms.DownKey) && Input.GetKeyDown(ms.ShoKey) && ms.isGrounded == false && estado == false)
+        {
+
+            gps.CAnimation.SetBool("dshot1", true);
+            gps.CAnimation.SetBool("jshotr", false);
+            gps.CAnimation.SetBool("jshotl", false);
+
+
+        }
+        else { gps.CAnimation.SetBool("dshot1", false); }
+        if (Input.GetKey(ms.DownKey) && Input.GetKeyDown(ms.ShoKey) && estado !=false && ms.isGrounded == false)
+        {
+
+            gps.CAnimation.SetBool("dshot", true);
+            gps.CAnimation.SetBool("jshotr", false);
+            gps.CAnimation.SetBool("jshotl", false);
+
+
+        }
         else { gps.CAnimation.SetBool("dshot", false); }
         if ((Input.GetKey(ms.UrKey) && Input.GetKeyDown(ms.ShoKey) && estado == false && ms.isGrounded == true))
         {
@@ -540,6 +559,14 @@ public class PlayerMovement : MonoBehaviour {
 
       
         if (Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ShoKey)) {
+           
+           
+            gps.CAnimation.SetBool("ushot", true);
+            gps.CAnimation.SetBool("shotr", false);
+            gps.CAnimation.SetBool("shotl", false);
+        }
+        else { gps.CAnimation.SetBool("ushot", false); }
+           if (Input.GetKey(ms.Upkey) && Input.GetKeyDown(ms.ShoKey)) {
            
            
             gps.CAnimation.SetBool("ushot", true);
@@ -959,7 +986,7 @@ private void FixedUpdate()
 
         GameObject CloneTiro = Instantiate(tiro1, point.position, point.rotation);
     }
-    if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro = Instantiate(missil1, point.position, point.rotation); }
+    if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro = Instantiate(missil1, point.position, point.rotation); mcontm--; }
 
     }
     
@@ -974,7 +1001,7 @@ private void FixedUpdate()
         }
 
         GameObject CloneTiro = Instantiate(tup, point.position, point.rotation);
-        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro1= Instantiate(missilup, point.position, point.rotation); }
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro1= Instantiate(missilup, point.position, point.rotation); mcontm--; }
     }
 
 
@@ -991,7 +1018,7 @@ private void FixedUpdate()
 
             GameObject CloneTiro = Instantiate(tdown, point.position, point.rotation);
         }
-        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro2= Instantiate(missildw, point.position, point.rotation); }
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro2= Instantiate(missildw, point.position, point.rotation); mcontm--; }
 
     }
 
@@ -1006,7 +1033,7 @@ private void FixedUpdate()
 
             GameObject CloneTiro = Instantiate(tdl, point.position, point.rotation);
         }
-        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro3= Instantiate(missildl, point.position, point.rotation); }
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro3= Instantiate(missildl, point.position, point.rotation); mcontm--; }
 
     }
 
@@ -1020,7 +1047,7 @@ private void FixedUpdate()
 
             GameObject CloneTiro = Instantiate(tur, point.position, point.rotation);
         }
-        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro4= Instantiate(missilur, point.position, point.rotation); }
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro4= Instantiate(missilur, point.position, point.rotation); mcontm--; }
 
     }
 
@@ -1034,7 +1061,7 @@ private void FixedUpdate()
 
             GameObject CloneTiro = Instantiate(tul, point.position, point.rotation);
         }
-        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro5= Instantiate(missilul, point.position, point.rotation); }
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro5= Instantiate(missilul, point.position, point.rotation); mcontm--; }
 
     }
     void drshot()
@@ -1047,7 +1074,7 @@ private void FixedUpdate()
 
             GameObject CloneTiro = Instantiate(tdr, point.position, point.rotation);
         }
-        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro6= Instantiate(missildr, point.position, point.rotation); }
+        if (tradGun == 1 && mcontm > 0 && ball == false) { GameObject CloneTiro6= Instantiate(missildr, point.position, point.rotation); mcontm--; }
 
     }
 

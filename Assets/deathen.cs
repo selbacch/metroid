@@ -16,13 +16,13 @@ public class deathen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ativa == true) { CAnimation.SetBool("death", true); };
+        if (ativa == true) { morreu(); }
 
 
     }
     void morreu()
     {
         inimigo.SetActive(false);
-        CAnimation.SetBool("death", false);
+        
     }
 }

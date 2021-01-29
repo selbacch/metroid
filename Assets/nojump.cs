@@ -23,18 +23,18 @@ public class nojump : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         // If the player hits the trigger.
-        if (collider.gameObject.tag == "player")
+        if (collider.gameObject.tag == "Player")
         {
-            CAnimation.SetBool("abre", true);
-
-
-
-            // More on game controller shortly.
-
+                  
             joga.SetActive(false);
            trava.SetActive(false);
-            CAnimation.SetBool("fecha", false);
+          
         }
+
+        
+
+
+
 
     }
 }
